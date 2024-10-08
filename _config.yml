@@ -23,6 +23,12 @@ icon: /assets/images/icon-512.png
 twitter_username: leonardocuellargold
 github_username:  leonardocuellargold
 
+author: "Leonardo Cuellar"
+resume:
+  title: "MIS & Accounting Student | Cloud & Data Specialist"
+  email: "leonardo@example.com"
+  phone: "(123) 456-7890"
+  linkedin: "https://linkedin.com/in/leonardo-cuellar"
 # Build settings
 markdown: kramdown
 
