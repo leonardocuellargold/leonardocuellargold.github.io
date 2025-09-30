@@ -136,4 +136,56 @@ footer { margin-top: 3rem; font-size: .75rem; color: var(--text-soft); }
 .max-w-prose { max-width: 70ch; }
 .center { text-align: center; }
 
+/* Project Detail Styles ------------------------------------------------ */
+.project-header { margin-bottom: 2rem; }
+.project-subtitle { font-size: 1.1rem; color: var(--text-soft); margin: .5rem 0 1rem; }
+.project-meta { margin-top: 1.5rem; }
+.project-stack { margin: 1rem 0; }
+.project-links { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1rem; }
+.project-link { 
+  padding: .5rem 1rem; background: var(--bg-alt); border: 1px solid var(--border); 
+  border-radius: var(--radius-sm); text-decoration: none; font-size: .9rem;
+  transition: var(--transition);
+}
+.project-link:hover { background: var(--accent); color: var(--text); }
+
+.project-hero { margin: 2rem 0; }
+.project-image { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+.project-content { line-height: 1.7; }
+.project-content h2 { margin: 2rem 0 1rem; }
+.project-content h3 { margin: 1.5rem 0 .75rem; }
+
+/* Gallery Styles ------------------------------------------------------- */
+.project-gallery { margin: 3rem 0; }
+.gallery-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); }
+.gallery-item img { width: 100%; border-radius: var(--radius-sm); box-shadow: var(--shadow); }
+.gallery-caption { margin: .5rem 0 0; font-size: .8rem; color: var(--text-soft); }
+
+/* Books & Skills Styles ----------------------------------------------- */
+.books-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); margin: 1.5rem 0; }
+.book-item h4 { margin: 0 0 .25rem; font-size: .95rem; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; }
+
+/* Blog Styles ---------------------------------------------------------- */
+.posts-list { margin: 2rem 0; }
+.post-preview h2 { margin-top: 0; font-size: 1.25rem; }
+.post-preview h2 a { color: var(--text); text-decoration: none; }
+.post-preview h2 a:hover { color: var(--accent); }
+.read-more { font-weight: 500; }
+
+.post-header { margin-bottom: 2rem; }
+.post-title { margin-bottom: .5rem; }
+.post-meta { color: var(--text-soft); font-size: .9rem; }
+.post-content { line-height: 1.7; }
+.post-footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+
+/* Enhanced Mobile Responsiveness -------------------------------------- */
+@media (max-width: 768px) {
+  .project-links { justify-content: center; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .books-grid { grid-template-columns: 1fr; }
+  .skill-tags { justify-content: center; }
+}
+
 @media print { nav, footer { display:none !important; } body { background:#fff; } .card { box-shadow:none; } }

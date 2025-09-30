@@ -21,21 +21,41 @@ minima:
     - { platform: github,     user_url: "https://github.com/leonardocuellargold" }
     - { platform: x,          user_url: "https://x.com/le0nardo_gold" }
 
-# Collections (optional blog)
+# Collections & Blog
 collections:
   posts:
     output: true
+    permalink: /blog/:year/:month/:day/:title/
+  projects:
+    output: true
+    permalink: /projects/:name/
 
-# Navigation
+# Blog defaults
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Leonardo Cuellar"
+  - scope:
+      path: "_projects"
+      type: "projects"
+    values:
+      layout: "project"
+
+# Navigation (reordered per user request)
 nav:
   - title: "Home"
     url: "/"
-  - title: "Projects"
-    url: "/projects/"
   - title: "Experience"
     url: "/experience/"
+  - title: "Projects"
+    url: "/projects/"
   - title: "Certifications"
     url: "/certifications/"
+  - title: "About"
+    url: "/about/"
   - title: "Contact"
     url: "/contact/"
 

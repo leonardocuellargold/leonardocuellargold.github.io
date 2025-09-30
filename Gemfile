@@ -1,9 +1,8 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
-
-gem "jekyll-remote-theme", "~> 0.4.3"
-
-gem "faraday-retry", "~> 2.3"
-
-gem "minima", "~> 2.5"
+gem "jekyll", "~> 4.3"
+gem "webrick"               # needed on Ruby 3+
+gem "jekyll-remote-theme"   # since you're using remote_theme
+gem "jekyll-seo-tag"
+gem "jekyll-sitemap"
+gem "jekyll-feed"

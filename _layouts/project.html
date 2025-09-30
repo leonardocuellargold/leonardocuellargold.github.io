@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<article class="project-detail">
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="project-subtitle">{{ page.subtitle }}</p>{% endif %}
+    
+    <div class="project-meta">
+      {% if page.stack %}
+        <div class="project-stack">
+          {% for tech in page.stack %}
+            <span class="badge">{{ tech }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+      
+      <div class="project-links">
+        {% if page.github %}<a href="{{ page.github }}" target="_blank" class="project-link">GitHub</a>{% endif %}
+        {% if page.live %}<a href="{{ page.live }}" target="_blank" class="project-link">Live Demo</a>{% endif %}
+        {% if page.case_study %}<a href="{{ page.case_study }}" target="_blank" class="project-link">Case Study</a>{% endif %}
+      </div>
+    </div>
+  </header>
+
+  {% if page.featured_image %}
+    <div class="project-hero">
+      <img src="{{ page.featured_image }}" alt="{{ page.title }}" class="project-image">
+    </div>
+  {% endif %}
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  {% if page.gallery %}
+    <section class="project-gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        {% for image in page.gallery %}
+          <div class="gallery-item">
+            <img src="{{ image.src }}" alt="{{ image.alt | default: page.title }}" loading="lazy">
+            {% if image.caption %}<p class="gallery-caption">{{ image.caption }}</p>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <footer class="project-footer">
+    <p class="small">
+      <a href="/projects/">&larr; Back to Projects</a>
+    </p>
+  </footer>
+</article>
