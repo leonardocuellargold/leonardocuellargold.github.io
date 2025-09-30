@@ -1,6 +1,35 @@
-<!-- Additional head assets (minima automatically includes this file if present) -->
+<!-- Professional Portfolio Enhancements -->
+
+<!-- Optimized Font Loading -->
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Theme Colors -->
+<meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: dark)">
+
+<!-- Enhanced Meta Tags -->
+<meta name="description" content="Leonardo Cuellar - Cloud Infrastructure, Data Analytics & Strategic Consulting. Transforming ideas into scalable solutions.">
+<meta name="keywords" content="cloud computing, data analytics, consulting, software engineering, portfolio">
+<meta name="author" content="Leonardo Cuellar">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+
+<!-- Performance Hints -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+<!-- Favicon Enhancement -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+
+<!-- Critical CSS for immediate load -->
+<style>
+  html { font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11'; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .hero { min-height: 60vh; }
+</style>
