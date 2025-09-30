@@ -1,0 +1,18 @@
+- name: Amigo — Social Events App
+  summary: Mobile app (Expo + Firebase) to discover local events with map/feed UI and friend‑finding.
+  stack: [Expo, React Native, Firebase]
+  github: https://github.com/YOUR-USERNAME/amigo
+  case: https://your-site/case-studies/amigo
+  link: 
+- name: Gift Certificate Automation
+  summary: Automates donation certificates using Power Automate + Go backend; emails PDFs to orgs.
+  stack: [Go, Power Automate, Optimy]
+  github: https://github.com/YOUR-USERNAME/gift-cert-automation
+  case: 
+  link: 
+- name: WV Education Outcomes Modeling
+  summary: County‑level prediction using R with demographic and finance data; interactive visuals.
+  stack: [R, tidyverse, ggplot2]
+  github: 
+  case: 
+  link: 

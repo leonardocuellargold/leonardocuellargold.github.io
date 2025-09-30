@@ -1,0 +1,10 @@
+<div class="card">
+  <h3>{{ include.project.name }}</h3>
+  <p class="small">{{ include.project.stack | join: ' • ' }}</p>
+  <p>{{ include.project.summary }}</p>
+  <p>
+    {% if include.project.link %}<a href="{{ include.project.link }}" target="_blank">Live</a>{% endif %}
+    {% if include.project.github %} • <a href="{{ include.project.github }}" target="_blank">GitHub</a>{% endif %}
+    {% if include.project.case %} • <a href="{{ include.project.case }}" target="_blank">Case Study</a>{% endif %}
+  </p>
+</div>

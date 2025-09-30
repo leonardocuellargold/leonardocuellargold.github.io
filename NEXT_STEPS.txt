@@ -1,0 +1,5 @@
+1) Replace YOUR-USERNAME and profile links in _config.yml and pages/contact.md
+2) Add your real content in _data/*.yml (projects, experience, certs)
+3) Commit & push to the repo named <username>.github.io
+4) In repo Settings → Pages, ensure Source = Deploy from branch (main)
+5) Optional: add a custom domain and enable HTTPS

@@ -1,0 +1,48 @@
+title: "Leonardo Cuellar"
+description: "MIS & Accounting | Cloud | Data | Consulting"
+url: "https://leonardocuellargold.github.io"
+baseurl: ""
+# Pick light accent colors you like
+accent_color: "#ffd6e7" # light pink accent
+text_color:   "#111111"
+
+# Theme & plugins
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Minima options
+minima:
+  social_links:
+    - { platform: linkedin,   user_url: "https://www.linkedin.com/in/leonardo-gold" }
+    - { platform: github,     user_url: "https://github.com/leonardocuellargold" }
+    - { platform: x,          user_url: "https://x.com/le0nardo_gold" }
+
+# Collections (optional blog)
+collections:
+  posts:
+    output: true
+
+# Navigation
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Experience"
+    url: "/experience/"
+  - title: "Certifications"
+    url: "/certifications/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Build
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# SEO
+author: "Leonardo Cuellar"
+lang: "en"

@@ -1,0 +1,17 @@
+---
+layout: base
+---
+{% include header.html %}
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <nav>
+      {% if site.nav %}
+      {% for item in site.nav %}
+        <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+      {% endif %}
+    </nav>
+    {{ content }}
+  </div>
+</main>
+{% include footer.html %}
