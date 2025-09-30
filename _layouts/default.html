@@ -1,13 +1,19 @@
 ---
 layout: base
 ---
-{% include header.html %}
+{% comment %} Custom head assets handled via head-custom.html (minima hook) {% endcomment %}
 <main class="page-content" aria-label="Content">
   <div class="wrapper">
     <nav>
       {% if site.nav %}
       {% for item in site.nav %}
-        <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% assign current = page.url | default: '/' %}
+        {% assign target = item.url %}
+        {% if current == target %}
+          <a class="page-link active" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% else %}
+          <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endif %}
       {% endfor %}
       {% endif %}
     </nav>
