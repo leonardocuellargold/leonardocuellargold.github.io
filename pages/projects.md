@@ -237,3 +237,33 @@ permalink: /projects/
   }
 }
 </style>
+
+<!-- Project Filter JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.category-filter');
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const targetCategory = this.dataset.category;
+      
+      // Update active filter button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Filter project cards
+      projectCards.forEach(card => {
+        const cardCategory = card.dataset.category;
+        
+        if (targetCategory === 'all' || cardCategory === targetCategory) {
+          card.style.display = 'block';
+          card.style.animation = 'fadeInUp 0.6s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
