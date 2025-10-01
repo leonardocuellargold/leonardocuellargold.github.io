@@ -62,24 +62,35 @@
     color: #FAFAFA; 
   }
   .site-title { color: #2E2E2E; }
-  .page-link.active { color: #FF6B6B; }
+  .page-link { color: #525252; }
+  .page-link.active { 
+    color: #FF6B6B; 
+    background: rgba(255, 107, 107, 0.15);
+  }
+  .page-link:hover {
+    color: #FF6B6B;
+    background: rgba(255, 107, 107, 0.1);
+  }
   
   /* Dark theme critical styles */
   @media (prefers-color-scheme: dark) {
     body {
-      background: #0f0f23;
-      color: #ffffff;
+      background: #0f172a;
+      color: #f1f5f9;
     }
-    .site-title { color: #ffffff; }
+    .site-title { color: #f1f5f9; }
     .hero {
-      background: linear-gradient(135deg, #2C2C54 0%, #1a1a2e 100%);
+      background: #2C2C54;
+      color: #FAFAFA;
     }
-    .page-link { color: #e2e8f0; }
-    .page-link.active { color: #FF6B6B; }
-    .card {
-      background: #1a1a2e;
-      border-color: #2d3748;
-      color: #ffffff;
+    .page-link { color: #cbd5e1; }
+    .page-link.active { 
+      color: #FF6B6B; 
+      background: rgba(255, 107, 107, 0.15);
+    }
+    .page-link:hover {
+      color: #FF6B6B;
+      background: rgba(255, 107, 107, 0.1);
     }
   }
 </style>
