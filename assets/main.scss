@@ -335,7 +335,7 @@ p {
 .site-title {
   font-size: var(--text-xl);
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--accent);
   text-decoration: none;
   letter-spacing: -0.025em;
   transition: color var(--duration-200) var(--ease-out);
@@ -409,7 +409,7 @@ nav {
   }
   
   .site-title {
-    color: var(--text-primary);
+    color: var(--accent);
   }
   
   .hero {
