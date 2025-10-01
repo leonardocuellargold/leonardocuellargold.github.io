@@ -3,7 +3,7 @@ layout: default
 title: About
 permalink: /about/
 ---
-
+<br>
 {% include section-title.html id="about" title="About Leonardo" subtitle="Background, involvement, and continuous learning journey." %}
 
 ## Background

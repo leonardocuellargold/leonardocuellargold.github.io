@@ -3,6 +3,7 @@ layout: default
 title: Contact
 permalink: /contact/
 ---
+<br>
 
 {% include section-title.html id="contact" title="Contact" subtitle="Reach out for collaborations or opportunities." %}
 

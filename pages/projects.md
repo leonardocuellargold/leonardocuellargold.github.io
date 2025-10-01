@@ -3,6 +3,7 @@ layout: default
 title: Projects
 permalink: /projects/
 ---
+<br>
 
 <div class="container">
   <!-- Page Header -->

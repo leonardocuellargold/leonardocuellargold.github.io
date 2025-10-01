@@ -3,6 +3,7 @@ layout: default
 title: Certifications
 permalink: /certifications/
 ---
+<br>
 
 {% include section-title.html id="certs" title="Certifications" subtitle="Verified skills and course work." %}
 <ul>
