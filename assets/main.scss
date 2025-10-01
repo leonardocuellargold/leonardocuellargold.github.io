@@ -365,9 +365,9 @@ p {
 }
 
 .site-title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--text-primary);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--accent);
   text-decoration: none;
   letter-spacing: -0.05em;
   text-transform: uppercase;
@@ -439,10 +439,8 @@ p {
     background: rgba(255, 107, 107, 0.1);
   }
   
-  .page-link.active {
+  .site-title {
     color: var(--accent);
-    background: rgba(255, 107, 107, 0.15);
-    font-weight: 600;
   }
   
   .hero {
