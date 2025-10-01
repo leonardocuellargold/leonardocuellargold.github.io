@@ -1,7 +1,12 @@
 <div class="timeline-item">
   <div class="card">
-  <strong>{{ include.item.title }}</strong>
-  <div class="small">{{ include.item.org }} • {{ include.item.when }} • {{ include.item.location }}</div>
-  <p>{{ include.item.points | join: '<br/>' }}</p>
+    <strong>{{ include.item.title }}</strong>
+    <div class="small">{{ include.item.org }} • {{ include.item.when }} • {{ include.item.location }}</div>
+    <p>{{ include.item.points | join: '<br/>' }}</p>
+    {% if include.item.blog_post %}
+      <div class="experience-links">
+        <a href="{{ include.item.blog_post | relative_url }}" class="btn btn-secondary">Read My Experience</a>
+      </div>
+    {% endif %}
   </div>
 </div>

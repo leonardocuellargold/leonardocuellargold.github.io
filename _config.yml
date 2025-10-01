@@ -52,6 +52,8 @@ nav:
     url: "/experience/"
   - title: "Projects"
     url: "/projects/"
+  - title: "Blog"
+    url: "/blog/"
   - title: "Certifications"
     url: "/certifications/"
   - title: "About"
