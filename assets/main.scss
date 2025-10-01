@@ -154,19 +154,19 @@
 /* Dark Theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-tertiary: #334155;
-    --bg-elevated: #1e293b;
-    --bg-overlay: rgba(15, 23, 42, 0.9);
+    --bg-primary: #0f0f23;
+    --bg-secondary: #1a1a2e;
+    --bg-tertiary: #16213e;
+    --bg-elevated: #1a1a2e;
+    --bg-overlay: rgba(15, 15, 35, 0.95);
     
-    --text-primary: #f1f5f9;
-    --text-secondary: #cbd5e1;
-    --text-tertiary: #64748b;
-    --text-inverse: #0f172a;
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-tertiary: #94a3b8;
+    --text-inverse: #0f0f23;
     
-    --border-primary: #334155;
-    --border-secondary: #475569;
+    --border-primary: #2d3748;
+    --border-secondary: #4a5568;
     
     --gray-50: #0f172a;
     --gray-100: #1e293b;
@@ -269,13 +269,13 @@ p {
 }
 
 ::selection {
-  background: var(--primary-100);
-  color: var(--primary-900);
+  background: var(--accent);
+  color: var(--text-inverse);
 }
 
 @media (prefers-color-scheme: dark) {
   ::selection {
-    background: var(--primary-600);
+    background: var(--accent);
     color: var(--text-inverse);
   }
 }
@@ -399,22 +399,222 @@ nav {
 }
 
 @media (prefers-color-scheme: dark) {
+  .site-header {
+    background: rgba(15, 15, 35, 0.9);
+    border-bottom-color: var(--border-primary);
+  }
+  
+  .site-title {
+    color: var(--text-primary);
+  }
+  
+  .site-title:hover {
+    color: var(--accent);
+  }
+  
+  .page-link {
+    color: var(--text-secondary);
+  }
+  
   .page-link::before {
-    background: var(--primary-900);
+    background: var(--bg-elevated);
   }
   
   .page-link:hover,
   .page-link.active {
     color: var(--accent);
-  }
-  
-  .site-title {
-    color: var(--accent);
+    background: var(--bg-elevated);
   }
   
   .hero {
-    background: var(--secondary);
+    background: linear-gradient(135deg, var(--secondary) 0%, #1a1a2e 100%);
+    color: var(--text-primary);
   }
+  
+  .hero-title {
+    color: var(--text-primary);
+  }
+  
+  .hero-subtitle {
+    color: var(--text-secondary);
+  }
+  
+  .hero .stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+  }
+  
+  .hero .stat-number {
+    color: var(--accent);
+  }
+  
+  .hero .stat-label {
+    color: var(--text-secondary);
+  }
+  
+  /* Card and content area improvements */
+  .card {
+    background: var(--bg-elevated);
+    border-color: var(--border-primary);
+    color: var(--text-primary);
+  }
+  
+  .card:hover {
+    border-color: var(--accent);
+    background: var(--bg-tertiary);
+  }
+  
+  /* Project cards */
+  .project-card {
+    background: var(--bg-elevated);
+    border-color: var(--border-primary);
+  }
+  
+  .project-title {
+    color: var(--text-primary);
+  }
+  
+  .project-description {
+    color: var(--text-secondary);
+  }
+  
+  /* Section headers */
+  .section-title {
+    color: var(--text-primary);
+  }
+  
+  .section-subtitle {
+    color: var(--text-secondary);
+  }
+  
+  /* Badges and tags */
+  .badge {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border-primary);
+  }
+  
+  .badge:hover {
+    background: var(--accent);
+    color: var(--text-inverse);
+    border-color: var(--accent);
+  }
+  
+  /* Links */
+  a {
+    color: var(--accent);
+  }
+  
+  a:hover {
+    color: var(--accent);
+    filter: brightness(1.2);
+  }
+  
+  /* Buttons */
+  .btn-secondary {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    border-color: var(--border-primary);
+  }
+  
+  .btn-secondary:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent);
+  }
+  
+  .btn-ghost {
+    color: var(--text-secondary);
+  }
+  
+  .btn-ghost:hover {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+  }
+  
+  /* Timeline */
+  .timeline::before {
+    background: linear-gradient(180deg, var(--border-primary), var(--accent), var(--border-primary));
+  }
+  
+  .timeline-item::before {
+    background: var(--accent);
+    border-color: var(--bg-primary);
+    box-shadow: 0 0 0 4px var(--bg-elevated);
+  }
+  
+  /* Post cards */
+  .post-card {
+    background: var(--bg-elevated);
+    border-color: var(--border-primary);
+    color: var(--text-primary);
+  }
+  
+  .post-title a {
+    color: var(--text-primary);
+  }
+  
+  .post-title a:hover {
+    color: var(--accent);
+  }
+  
+  .post-meta {
+    color: var(--text-secondary);
+  }
+  
+  .post-excerpt {
+    color: var(--text-secondary);
+  }
+  
+  /* Footer improvements */
+  .site-footer {
+    background: var(--bg-elevated);
+    border-top-color: var(--border-primary);
+  }
+  
+  .footer-title {
+    color: var(--text-primary);
+  }
+  
+  .footer-description {
+    color: var(--text-secondary);
+  }
+  
+  .footer-heading {
+    color: var(--text-primary);
+  }
+  
+  .footer-link {
+    color: var(--text-secondary);
+  }
+  
+  .footer-link:hover {
+    color: var(--accent);
+  }
+  
+  /* Gallery and images */
+  .gallery-overlay {
+    background: linear-gradient(180deg, transparent 0%, rgba(15,15,35,0.9) 100%);
+  }
+  
+  .gallery-caption {
+    color: var(--text-primary);
+  }
+  
+  /* Project filters */
+  .category-filter {
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+    border-color: var(--border-primary);
+  }
+  
+  .category-filter.active,
+  .category-filter:hover {
+    background: var(--accent);
+    color: var(--text-inverse);
+    border-color: var(--accent);
+  }
+  
 }
 
 /* Mobile Navigation */

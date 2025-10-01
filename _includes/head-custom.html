@@ -63,4 +63,23 @@
   }
   .site-title { color: #2E2E2E; }
   .page-link.active { color: #FF6B6B; }
+  
+  /* Dark theme critical styles */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #0f0f23;
+      color: #ffffff;
+    }
+    .site-title { color: #ffffff; }
+    .hero {
+      background: linear-gradient(135deg, #2C2C54 0%, #1a1a2e 100%);
+    }
+    .page-link { color: #e2e8f0; }
+    .page-link.active { color: #FF6B6B; }
+    .card {
+      background: #1a1a2e;
+      border-color: #2d3748;
+      color: #ffffff;
+    }
+  }
 </style>
