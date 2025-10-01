@@ -64,6 +64,11 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+# SASS/SCSS Configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
 # SEO
 author: "Leonardo Cuellar"
 lang: "en"

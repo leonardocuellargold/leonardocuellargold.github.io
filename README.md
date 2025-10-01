@@ -32,14 +32,14 @@ bundle exec jekyll serve --livereload
 ├── _layouts/           # Page templates (default, post, project)
 ├── _posts/            # Blog articles
 ├── _projects/         # Detailed project case studies  
-├── assets/css/main.scss  # Complete FAANG-grade design system
+├── assets/main.scss      # Complete FAANG-grade design system
 ├── pages/             # Static pages (experience, projects, about)
 └── index.md          # Professional homepage with hero section
 ```
 
 ## 🎨 Customization
 
-- **Brand Colors**: Update CSS variables in `assets/css/main.scss`
+- **Brand Colors**: Update CSS variables in `assets/main.scss`
 - **Content**: Edit YAML files in `_data/` directory
 - **Personal Info**: Update `_config.yml` and social links
 - **Projects**: Add case studies in `_projects/` with image galleries
