@@ -62,38 +62,29 @@
     color: #FAFAFA; 
   }
   .site-title { 
-    font-size: 2rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    background: linear-gradient(135deg, #1C1C1E, #FF6B6B);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2E2E2E;
+  }
+  .site-title:hover {
+    color: #FF6B6B;
   }
   .site-nav { 
-    border-bottom: 2px solid #FF6B6B;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e5e5e5;
   }
   .page-link { 
-    color: #525252;
-    font-weight: 600;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    padding: 0.75rem 1.5rem;
-    border-radius: 2rem;
-    border: 2px solid transparent;
+    color: #71717a;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.2s ease;
   }
   .page-link.active { 
-    color: white;
-    background: #1C1C1E;
-    border-color: #1C1C1E;
-    box-shadow: 0 4px 15px rgba(28, 28, 30, 0.3);
+    color: #FF6B6B;
+    font-weight: 600;
   }
   .page-link:hover {
-    color: white;
-    background: #FF6B6B;
-    border-color: #FF6B6B;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    color: #FF6B6B;
   }
   
   /* Dark theme critical styles */
@@ -102,19 +93,25 @@
       background: #0f172a;
       color: #f1f5f9;
     }
-    .site-title { color: #f1f5f9; }
+    .site-title { 
+      color: #f1f5f9; 
+    }
+    .site-title:hover {
+      color: #FF6B6B;
+    }
     .hero {
       background: #2C2C54;
       color: #FAFAFA;
     }
-    .page-link { color: #cbd5e1; }
+    .page-link { 
+      color: #cbd5e1; 
+    }
     .page-link.active { 
       color: #FF6B6B; 
-      background: rgba(255, 107, 107, 0.15);
+      font-weight: 600;
     }
     .page-link:hover {
       color: #FF6B6B;
-      background: rgba(255, 107, 107, 0.1);
     }
   }
 </style>
