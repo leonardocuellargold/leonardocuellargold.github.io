@@ -26,12 +26,12 @@ title: Home
           <span class="stat-label">Projects Delivered</span>
         </div>
         <div class="stat-card animate-fade-up" style="animation-delay: 0.3s">
-          <span class="stat-number">12+</span>
+          <span class="stat-number">5+</span>
           <span class="stat-label">Certifications</span>
         </div>
         <div class="stat-card animate-fade-up" style="animation-delay: 0.4s">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Client Satisfaction</span>
+          <span class="stat-number">8+</span>
+          <span class="stat-label">Industries Served</span>
         </div>
       </div>
     </div>

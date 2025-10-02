@@ -3,7 +3,7 @@ layout: default
 title: Certifications
 permalink: /certifications/
 ---
-
+<br>
 <div class="container">
   <!-- Page Header -->
   <section class="section-header animate-fade-up">

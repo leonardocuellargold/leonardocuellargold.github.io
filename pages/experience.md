@@ -30,8 +30,8 @@ permalink: /experience/
       <span class="stat-label">Technologies Mastered</span>
     </div>
     <div class="stat-card">
-      <span class="stat-number">100%</span>
-      <span class="stat-label">Client Satisfaction</span>
+      <span class="stat-number">8+</span>
+      <span class="stat-label">Industries Served</span>
     </div>
   </div>
 

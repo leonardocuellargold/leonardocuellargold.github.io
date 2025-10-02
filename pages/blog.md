@@ -3,7 +3,7 @@ layout: default
 title: Blog
 permalink: /blog/
 ---
-
+<br>
 <div class="container">
   <!-- Page Header -->
   <section class="section-header animate-fade-up">
