@@ -120,6 +120,7 @@ permalink: /experience/
   </section>
 
   <!-- Call to Action -->
+  <br>
   <section class="cta-section text-center mt-20 animate-fade-up">
     <div class="card" style="max-width: 600px; margin: 0 auto;">
       <h3>Ready to Collaborate?</h3>

@@ -4,19 +4,22 @@ title: Blog
 permalink: /blog/
 ---
 
-<div class="hero">
-  <div class="hero-content">
-    <h1 class="hero-title">{{ page.title }}</h1>
-    <p class="hero-subtitle">Thoughts, insights, and stories from my journey in technology</p>
-  </div>
-</div>
-
 <div class="container">
-  <div class="blog-posts">
+  <!-- Page Header -->
+  <section class="section-header animate-fade-up">
+    <h1 class="section-title">Blog</h1>
+    <p class="section-subtitle">
+      Thoughts, insights, and stories from my journey in technology consulting, 
+      cloud infrastructure, and professional development.
+    </p>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="blog-posts animate-fade-up" style="animation-delay: 0.2s">
     {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
     {% if blog_posts.size > 0 %}
       {% for post in blog_posts %}
-        <article class="blog-post-card">
+        <article class="blog-post-card card">
           <div class="post-meta">
             <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
             {% if post.tags %}
@@ -38,27 +41,5 @@ permalink: /blog/
         <p>Check back soon for thoughts, insights, and stories from my journey in technology.</p>
       </div>
     {% endif %}
-  </div>
-</div>
-
-{% include section-title.html id="blog" title="Blog" subtitle="Thoughts on technology, data, and professional development." %}
-
-<div class="posts-list">
-  {% for post in site.posts %}
-    <article class="post-preview card">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p class="post-meta small">
-        {{ post.date | date: "%B %-d, %Y" }}
-        {% if post.author %} • {{ post.author }}{% endif %}
-      </p>
-      {% if post.excerpt %}
-        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-      {% endif %}
-      <p><a href="{{ post.url | relative_url }}" class="read-more">Read more &rarr;</a></p>
-    </article>
-  {% endfor %}
-  
-  {% if site.posts.size == 0 %}
-    <p class="small muted">No blog posts yet. Check back soon!</p>
-  {% endif %}
+  </section>
 </div>

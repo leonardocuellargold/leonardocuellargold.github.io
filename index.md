@@ -18,15 +18,15 @@ title: Home
       <!-- Stats Section -->
       <div class="stats-grid mt-16">
         <div class="stat-card animate-fade-up" style="animation-delay: 0.1s">
-          <span class="stat-number">3+</span>
+          <span class="stat-number">2+</span>
           <span class="stat-label">Years Experience</span>
         </div>
         <div class="stat-card animate-fade-up" style="animation-delay: 0.2s">
-          <span class="stat-number">15+</span>
+          <span class="stat-number">10+</span>
           <span class="stat-label">Projects Delivered</span>
         </div>
         <div class="stat-card animate-fade-up" style="animation-delay: 0.3s">
-          <span class="stat-number">5+</span>
+          <span class="stat-number">12+</span>
           <span class="stat-label">Certifications</span>
         </div>
         <div class="stat-card animate-fade-up" style="animation-delay: 0.4s">
