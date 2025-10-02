@@ -69,10 +69,46 @@ A sophisticated, FAANG-grade portfolio website showcasing expertise in cloud inf
    Detailed project description, challenges, solutions...
    ```
 
-3. **Images**: Add project images to `assets/img/projects/project-name/`
-   - Use descriptive filenames (hero.jpg, dashboard.png, architecture.svg)
-   - Optimize images (WebP when possible, compressed PNG/JPG)
-   - Include alt text in markdown: `![Description](/path/to/image.jpg)`
+3. **Images**: Add project images to `assets/img/projects/`
+   - **Naming Convention**: Use project slug + descriptor
+     - Hero images: `[project-slug]-hero.jpg`
+     - Gallery images: `[project-slug]-1.jpg`, `[project-slug]-2.jpg`, etc.
+   - **Image Specifications**: 
+     - Hero Images: 1200x600px (2:1 ratio)
+     - Gallery Images: 800x600px (4:3 ratio)
+     - Format: JPG for photos, PNG for screenshots
+     - Size: Under 200KB each (optimized for web)
+
+#### 🔧 **Troubleshooting Image Issues**
+
+**Images not appearing?** Check these common issues:
+
+1. **Slug Mismatch**: Jekyll converts project names to slugs automatically
+   ```bash
+   # Test slug generation:
+   echo "Your Project Name" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9 ]//g' | tr ' ' '-'
+   ```
+
+2. **File Naming**: Ensure files match exactly:
+   - Project file: `_projects/[exact-slug].md`  
+   - Image file: `assets/img/projects/[exact-slug]-hero.jpg`
+   - Frontmatter: `featured_image: /assets/img/projects/[exact-slug]-hero.jpg`
+
+3. **Collection Setup**: Verify `_config.yml` has:
+   ```yaml
+   collections:
+     projects:
+       output: true
+       permalink: /projects/:name/
+   ```
+
+**Quick Fix Template**:
+```markdown
+---
+title: "Project Name"
+featured_image: /assets/img/projects/project-slug-hero.jpg
+---
+```
 
 ### Updating Experience & Certifications
 - **Experience Timeline**: Modify `_data/experience.yml`

@@ -5,7 +5,7 @@ date: 2024-12-15
 stack: [Expo, React Native, Firebase]
 github: https://github.com/YOUR-USERNAME/amigo
 case_study: https://your-site/case-studies/amigo
-featured_image: /assets/img/projects/amigo-hero.jpg
+featured_image: /assets/img/projects/amigo-social-events-hero.jpg
 gallery:
   - src: /assets/img/projects/amigo-1.jpg
     alt: "Amigo app home screen"
