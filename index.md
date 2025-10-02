@@ -102,7 +102,7 @@ title: Home
     </div>
     
     <div class="text-center mt-12">
-      <a href="/experience/" class="btn btn-ghost">View Full Experience</a>
+      <a href="/experience/" class="btn btn-secondary">View Full Experience</a>
     </div>
   </section>
   
@@ -136,7 +136,7 @@ title: Home
     </div>
     
     <div class="text-center">
-      <a href="/certifications/" class="btn btn-ghost">View All Certifications</a>
+      <a href="/certifications/" class="btn btn-secondary">View All Certifications</a>
     </div>
   </section>
 </div>
