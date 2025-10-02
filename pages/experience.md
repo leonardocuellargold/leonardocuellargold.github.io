@@ -18,15 +18,15 @@ permalink: /experience/
   <!-- Experience Stats -->
   <div class="stats-grid mb-16 animate-fade-up" style="animation-delay: 0.2s">
     <div class="stat-card">
-      <span class="stat-number">3+</span>
+      <span class="stat-number">2+</span>
       <span class="stat-label">Years Experience</span>
     </div>
     <div class="stat-card">
-      <span class="stat-number">15+</span>
-      <span class="stat-label">Projects Delivered</span>
+      <span class="stat-number">10+</span>
+      <span class="stat-label">Projects Completed</span>
     </div>
     <div class="stat-card">
-      <span class="stat-number">5+</span>
+      <span class="stat-number">12+</span>
       <span class="stat-label">Technologies Mastered</span>
     </div>
     <div class="stat-card">

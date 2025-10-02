@@ -1,18 +1,90 @@
 - name: Amigo — Social Events App
-  summary: Mobile app (Expo + Firebase) to discover local events with map/feed UI and friend‑finding.
-  stack: [Expo, React Native, Firebase]
+  summary: Mobile app to discover and share local events with map + feed UI and friend-finding, designed for spontaneous social activities.
+  stack: [Expo, React Native, Firebase, GCP]
   github: https://github.com/YOUR-USERNAME/amigo
-  case: https://your-site/case-studies/amigo
+  case: /case-studies/amigo
   link: 
-- name: Gift Certificate Automation
-  summary: Automates donation certificates using Power Automate + Go backend; emails PDFs to orgs.
-  stack: [Go, Power Automate, Optimy]
-  github: https://github.com/YOUR-USERNAME/gift-cert-automation
+
+- name: Bloom Inventory Management Webapp
+  summary: Full-stack Go + MongoDB web application automating Shopify backend workflows, inventory tracking, and consignment management.
+  stack: [Go, MongoDB, JavaScript, Shopify API]
+  github: https://github.com/YOUR-USERNAME/bloom-inventory
+  case: /case-studies/bloom
+  link: 
+
+- name: WV Broadband Geospatial Analysis (BEAD Program)
+  summary: Built geospatial dashboards and Census API pipelines to support $1.2B broadband deployment across West Virginia counties.
+  stack: [Python, Census API, GIS, DataViz]
+  github: 
+  case: /case-studies/bead-analysis
+  link: 
+
+- name: Consulting Portal (Go)
+  summary: Client-facing portal with Gorilla sessions, milestone tracking, invoicing, and dashboards deployed on GCP.
+  stack: [Go, Firestore, GCP, HTML/CSS]
+  github: https://github.com/YOUR-USERNAME/consulting-portal
   case: 
   link: 
-- name: WV Education Outcomes Modeling
-  summary: County‑level prediction using R with demographic and finance data; interactive visuals.
-  stack: [R, tidyverse, ggplot2]
+
+- name: Loudoun Cares Secure Document Intake
+  summary: HIPAA-compliant Google Apps Script intake platform automating document processing and intake with encryption and workflows.
+  stack: [Google Apps Script, Google Workspace, Security]
+  github: 
+  case: /case-studies/loudoun-cares
+  link: 
+
+- name: Nemacolin Digital Donation Certificates
+  summary: Automated donation certificates integrated with Apple Wallet and Google Wallet, streamlining donor and partner workflows.
+  stack: [Power Automate, Optimy, Apple Wallet, Google Wallet, Go]
+  github: 
+  case: /case-studies/nemacolin
+  link: 
+
+- name: MIS Student Internship Airtable Automation
+  summary: Automated job board that scrapes Lever + Greenhouse postings to Airtable; includes form submissions and approvals.
+  stack: [Python, Airtable API, Selenium, Notion]
+  github: https://github.com/YOUR-USERNAME/internship-automation
+  case: 
+  link: 
+
+- name: Juice Bar Business Analytics
+  summary: Designed financial and operations analytics models for a juice bar, covering demand, margins, and break-even analysis.
+  stack: [Excel, Tableau, SQL]
+  github: 
+  case: 
+  link: 
+
+- name: Netflix Tableau Dashboard
+  summary: Interactive dashboard visualizing Netflix catalog trends, ratings, and international content.
+  stack: [Tableau, SQL]
+  github: 
+  case: 
+  link: 
+
+- name: CMS + LMS Migration for 500Rising
+  summary: Managed and researched secure platform migration for training videos, emphasizing encryption, authentication, and LMS integration.
+  stack: [CMS, LMS, Security Tools]
+  github: 
+  case: 
+  link: 
+
+- name: Jekyll Blog
+  summary: Personal blog hosted on GitHub Pages with custom theme, SEO integration, and posts on consulting, data, and tech projects.
+  stack: [Jekyll, GitHub Pages, Ruby]
+  github: https://github.com/YOUR-USERNAME/portfolio-site
+  case: 
+  link: https://leonardocuellargold.github.io/
+
+- name: Knowledge Transfer Series (KTS)
+  summary: Educational series creating guides, repos, and workshops on consulting, project management, and technical skills.
+  stack: [Markdown, GitHub, Docs-as-Code]
+  github: https://github.com/YOUR-USERNAME/kts
+  case: 
+  link: 
+
+- name: Website Workshop
+  summary: Two-session hands-on workshop teaching students to build resumes and blogs using Jekyll + GitHub Pages.
+  stack: [Jekyll, GitHub Pages, Git]
   github: 
   case: 
   link: 
