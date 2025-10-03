@@ -36,7 +36,7 @@
 
 - name: Nemacolin Digital Donation Certificates
   summary: Automated donation certificates integrated with Apple Wallet and Google Wallet, streamlining donor and partner workflows.
-  stack: [Power Automate, Optimy, Apple Wallet, Google Wallet, Go]
+  stack: [Power Automate, Apple Wallet, Google Wallet, Go]
   github: 
   case: 
   link: 
@@ -46,46 +46,34 @@
   stack: [Python, Airtable API, Selenium, Notion]
   github: 
   case: 
-  link: 
+  link: https://airtable.com/appodkSkkI5M0Dbmg/shriP19YXE0FAgJTw
+  status: in-progress 
 
 - name: Juice Bar Business Analytics
   summary: Designed financial and operations analytics models for a juice bar, covering demand, margins, and break-even analysis.
   stack: [Excel, Tableau, SQL]
-  github: 
-  case: 
-  link: 
-
-- name: Netflix Tableau Dashboard
-  summary: Interactive dashboard visualizing Netflix catalog trends, ratings, and international content.
-  stack: [Tableau, SQL]
-  github: 
+  github: https://github.com/leonardocuellargold/Business_Application_Programming/tree/main/JuiceBar
   case: 
   link: 
 
 - name: CMS + LMS Migration for 500Rising
   summary: Managed and researched secure platform migration for training videos, emphasizing encryption, authentication, and LMS integration.
-  stack: [CMS, LMS, Security Tools]
+  stack: [CMS, LMS, Kajabi, Security Tools]
   github: 
   case: 
-  link: 
-
-- name: Jekyll Blog
-  summary: Personal blog hosted on GitHub Pages with custom theme, SEO integration, and posts on consulting, data, and tech projects.
-  stack: [Jekyll, GitHub Pages, Ruby]
-  github: https://github.com/YOUR-USERNAME/portfolio-site
-  case: 
-  link: https://leonardocuellargold.github.io/
+  link: https://500rising.org/
+  featured_image: /assets/images/projects/500rising-hero.jpg
 
 - name: Knowledge Transfer Series (KTS)
   summary: Educational series creating guides, repos, and workshops on consulting, project management, and technical skills.
   stack: [Markdown, GitHub, Docs-as-Code]
-  github: https://github.com/YOUR-USERNAME/kts
+  github: 
   case: 
   link: 
 
 - name: Website Workshop
   summary: Two-session hands-on workshop teaching students to build resumes and blogs using Jekyll + GitHub Pages.
-  stack: [Jekyll, GitHub Pages, Git]
+  stack: [Jekyll, Ruby, Liquid, GitHub Pages, Git]
   github: 
   case: 
   link: 
