@@ -62,8 +62,8 @@
   github: 
   case: 
   link: https://500rising.org/
-  featured_image: /assets/images/projects/500rising-hero.jpg
-
+  featured_image: /assets/img/projects/cms-lms-migration-for-500rising-hero.jpg  # Add this line
+  
 - name: Knowledge Transfer Series (KTS)
   summary: Educational series creating guides, repos, and workshops on consulting, project management, and technical skills.
   stack: [Markdown, GitHub, Docs-as-Code]
