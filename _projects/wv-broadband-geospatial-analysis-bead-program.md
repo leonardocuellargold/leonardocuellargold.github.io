@@ -1,7 +1,7 @@
 ---
 title: "WV Broadband Geospatial Analysis"
 subtitle: "Geospatial modeling, predictive analytics, and equitable bidding design for the $1.2B BEAD program"
-date: 2023-11-15
+date: 2025-10-03
 stack: [Python, R, GeoPandas, SciPy, PyTorch, TensorFlow]
 github: 
 featured_image: /assets/img/projects/wv-broadband-hero.jpg

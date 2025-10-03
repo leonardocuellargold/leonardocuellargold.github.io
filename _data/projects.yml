@@ -23,7 +23,7 @@
 - name: Consulting Portal
   summary: Client-facing portal with Gorilla sessions, milestone tracking, invoicing, and dashboards deployed on GCP.
   stack: [Go, Firestore, GCP, HTML/CSS]
-  github: https://github.com/YOUR-USERNAME/consulting-portal
+  github: 
   case: 
   link: 
 
@@ -31,20 +31,20 @@
   summary: HIPAA-compliant Google Apps Script intake platform automating document processing and intake with encryption and workflows.
   stack: [Google Apps Script, Google Workspace, Security]
   github: 
-  case: /case-studies/loudoun-cares
+  case: 
   link: 
 
 - name: Nemacolin Digital Donation Certificates
   summary: Automated donation certificates integrated with Apple Wallet and Google Wallet, streamlining donor and partner workflows.
   stack: [Power Automate, Optimy, Apple Wallet, Google Wallet, Go]
   github: 
-  case: /case-studies/nemacolin
+  case: 
   link: 
 
 - name: MIS Student Internship Airtable Automation
   summary: Automated job board that scrapes Lever + Greenhouse postings to Airtable; includes form submissions and approvals.
   stack: [Python, Airtable API, Selenium, Notion]
-  github: https://github.com/YOUR-USERNAME/internship-automation
+  github: 
   case: 
   link: 
 

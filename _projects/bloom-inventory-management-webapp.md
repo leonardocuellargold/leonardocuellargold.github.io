@@ -3,7 +3,7 @@ title: "Bloom — Shopify Inventory Web App"
 subtitle: "Web application for product management and logistics tracking"
 date: 2025-10-03
 stack: [Go, Gorilla Sessions, MongoDB, Shopify Webhooks, Digital Ocean]
-github: https://github.com/leonardocuellargold/Bloom_WebApp
+github: 
 featured_image: /assets/img/projects/bloom-hero.jpg
 hero_image: /assets/img/projects/bloom-detail-hero.jpg
 gallery:
