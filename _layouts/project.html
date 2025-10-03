@@ -37,6 +37,12 @@ layout: default
           </svg>
           Live Demo
         </a>{% endif %}
+        {% if page.paper %}<a href="{{ page.paper }}" target="_blank" class="btn btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+          </svg>
+          Research Paper
+        </a>{% endif %}
       </div>
     </div>
   </header>
@@ -44,6 +50,65 @@ layout: default
   <div class="project-content">
     {{ content }}
   </div>
+
+  {% if page.resources %}
+    <section class="project-resources">
+      <h2>Resources & Links</h2>
+      <div class="resources-grid">
+        {% for resource in page.resources %}
+          {% if resource.name and resource.url %}
+            <a href="{{ resource.url }}" target="_blank" class="resource-card">
+              <div class="resource-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                </svg>
+              </div>
+              <div class="resource-content">
+                <h4>{{ resource.name }}</h4>
+                {% if resource.description %}<p>{{ resource.description }}</p>{% endif %}
+              </div>
+            </a>
+          {% else %}
+            {% for item in resource %}
+              <a href="{{ item[1] }}" target="_blank" class="resource-card">
+                <div class="resource-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                  </svg>
+                </div>
+                <div class="resource-content">
+                  <h4>{{ item[0] }}</h4>
+                </div>
+              </a>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.paper %}
+    <section class="project-paper">
+      <h2>Research Paper</h2>
+      <div class="paper-card">
+        <div class="paper-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+          </svg>
+        </div>
+        <div class="paper-content">
+          <h3>{% if page.paper_title %}{{ page.paper_title }}{% else %}Project Research Paper{% endif %}</h3>
+          {% if page.paper_description %}<p>{{ page.paper_description }}</p>{% endif %}
+          <a href="{{ page.paper }}" target="_blank" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+            </svg>
+            View Paper
+          </a>
+        </div>
+      </div>
+    </section>
+  {% endif %}
 
   {% if page.gallery %}
     <section class="project-gallery">

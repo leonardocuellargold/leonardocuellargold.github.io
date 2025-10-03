@@ -92,7 +92,47 @@ A sophisticated, FAANG-grade portfolio website showcasing expertise in cloud inf
      - White text with shadow for readability
      - Responsive height (400px desktop, 300px mobile)
 
-#### 🔧 **Troubleshooting Image Issues**
+#### � **Papers & Resources Integration**
+
+Add research papers and external resources to enrich your project presentations.
+
+**Research Papers**:
+```yaml
+# Simple paper link
+paper: https://example.com/paper.pdf
+
+# Enhanced paper with metadata
+paper: https://example.com/paper.pdf
+paper_title: "Custom Paper Title"
+paper_description: "Brief description of the research and findings"
+```
+
+**Resources & External Links**:
+```yaml
+# Simple key-value format (legacy support)
+resources:
+  - Resource Name: https://example.com
+  - Another Resource: https://example2.com
+
+# Enhanced format with descriptions
+resources:
+  - name: "Resource Name"
+    url: "https://example.com"
+    description: "Brief description of what this resource provides"
+  - name: "Another Resource"
+    url: "https://example2.com"
+    description: "Another helpful description"
+```
+
+**Features**:
+- Papers display as prominent cards with custom titles and descriptions
+- Resources appear as grid of linked cards with icons
+- Both sections are optional - only appear if content exists
+- Mobile responsive design
+- Automatic icon integration for external links
+- Paper button appears in project header navigation
+
+#### �🔧 **Troubleshooting Image Issues**
 
 **Images not appearing?** Check these common issues:
 

@@ -13,14 +13,14 @@
   case: /case-studies/bloom
   link:
 
-- name: WV Broadband Geospatial Analysis (BEAD Program)
+- name: WV Broadband Geospatial Analysis BEAD Program
   summary: Built geospatial dashboards and Census API pipelines to support $1.2B broadband deployment across West Virginia counties.
   stack: [Python, Census API, GIS, DataViz]
   github: 
   case: /case-studies/bead-analysis
   link: 
 
-- name: Consulting Portal (Go)
+- name: Consulting Portal
   summary: Client-facing portal with Gorilla sessions, milestone tracking, invoicing, and dashboards deployed on GCP.
   stack: [Go, Firestore, GCP, HTML/CSS]
   github: https://github.com/YOUR-USERNAME/consulting-portal
