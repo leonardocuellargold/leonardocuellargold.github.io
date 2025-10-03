@@ -33,6 +33,7 @@
   github: 
   case: 
   link: 
+  featured_image: /assets/img/projects/LC-Hero.jpg
 
 - name: Nemacolin Digital Donation Certificates
   summary: Automated donation certificates integrated with Apple Wallet and Google Wallet, streamlining donor and partner workflows.
@@ -40,6 +41,7 @@
   github: 
   case: 
   link: 
+  featured_image: /assets/img/projects/Nemacolin-Hero.jpg
 
 - name: MIS Student Internship Airtable Automation
   summary: Automated job board that scrapes Lever + Greenhouse postings to Airtable; includes form submissions and approvals.
@@ -48,6 +50,7 @@
   case: 
   link: https://airtable.com/appodkSkkI5M0Dbmg/shriP19YXE0FAgJTw
   status: in-progress 
+  featured_image: /assets/img/projects/AirTable-Hero.jpg
 
 - name: Juice Bar Business Analytics
   summary: Designed financial and operations analytics models for a juice bar, covering demand, margins, and break-even analysis.
@@ -70,6 +73,7 @@
   github: 
   case: 
   link: 
+  featured_image: /assets/img/projects/KTS-Hero.jpg
 
 - name: Website Workshop
   summary: Two-session hands-on workshop teaching students to build resumes and blogs using Jekyll + GitHub Pages.
