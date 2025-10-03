@@ -1,7 +1,7 @@
 ---
 title: "Amigo — Social Events App"
 subtitle: "Mobile app for discovering local events with friend-finding features"
-date: 2024-12-15
+date: 2025-10-03
 stack: [Expo, React Native, Firebase]
 github: https://github.com/leonardocuellargold/Amigo_Website
 featured_image: /assets/img/projects/amigo-social-events-hero.jpg

@@ -1,7 +1,7 @@
 - name: Amigo — Social Events App
   summary: Mobile app to discover and share local events with map + feed UI and friend-finding, designed for spontaneous social activities.
   stack: [Expo, React Native, Firebase, GCP]
-  github: https://github.com/YOUR-USERNAME/amigo
+  github: https://github.com/leonardocuellargold/Amigo_Website
   case: /case-studies/amigo
   link:
   status: in-progress 
@@ -9,10 +9,9 @@
 - name: Bloom Inventory Management Webapp
   summary: Full-stack Go + MongoDB web application automating Shopify backend workflows, inventory tracking, and consignment management.
   stack: [Go, MongoDB, JavaScript, Shopify API]
-  github: https://github.com/YOUR-USERNAME/bloom-inventory
+  github: https://github.com/leonardocuellargold/bloom-inventory
   case: /case-studies/bloom
   link:
-  status: completed 
 
 - name: WV Broadband Geospatial Analysis (BEAD Program)
   summary: Built geospatial dashboards and Census API pipelines to support $1.2B broadband deployment across West Virginia counties.
