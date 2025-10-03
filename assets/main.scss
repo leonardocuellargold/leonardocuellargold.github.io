@@ -409,11 +409,11 @@ p {
   }
   
   .hero-title {
-    color: var(--text-secondary);
+    color: var(--text-inverse) !important;
   }
   
   .hero-subtitle {
-    color: rgba(250, 250, 250, 0.9);
+    color: rgba(250, 250, 250, 0.9) !important;
   }
   
   .hero .stat-card {
@@ -436,6 +436,11 @@ p {
       rgba(30, 41, 59, 0.85) 50%,
       rgba(15, 23, 42, 0.9) 100%
     );
+  }
+  
+  .project-header-bg .project-header-content h1,
+  .project-header-bg .project-header-content .project-subtitle {
+    color: var(--text-inverse) !important;
   }
 
   
@@ -710,12 +715,12 @@ hr {
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: var(--space-6);
-  color: var(--text-inverse);
+  color: var(--text-inverse) !important;
 }
 
 .hero-subtitle {
   font-size: var(--text-xl);
-  color: rgba(250, 250, 250, 0.9);
+  color: rgba(250, 250, 250, 0.9) !important;
   margin-bottom: var(--space-8);
   max-width: 600px;
   margin-left: auto;
@@ -991,8 +996,8 @@ hr {
 
 .project-header-bg .project-header-content h1,
 .project-header-bg .project-header-content .project-subtitle {
-  color: var(--text-inverse);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: var(--text-inverse) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
 }
 
 .project-header-bg .project-header-content h1 {
