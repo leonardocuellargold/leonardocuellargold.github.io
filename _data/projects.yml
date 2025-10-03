@@ -74,6 +74,6 @@
 - name: Website Workshop
   summary: Two-session hands-on workshop teaching students to build resumes and blogs using Jekyll + GitHub Pages.
   stack: [Jekyll, Ruby, Liquid, GitHub Pages, Git]
-  github: 
+  github: https://github.com/leonardocuellargold/Jekyll-GitHub-Pages-Website-Workshop
   case: 
   link: 

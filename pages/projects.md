@@ -41,6 +41,8 @@ permalink: /projects/
         <div class="project-image-container">
           {% if project_post and project_post.featured_image %}
             <img src="{{ project_post.featured_image }}" alt="{{ p.name }}" class="project-image">
+          {% elsif p.featured_image %}
+            <img src="{{ p.featured_image }}" alt="{{ p.name }}" class="project-image">
           {% else %}
             <div class="project-image placeholder-image">
               <div class="placeholder-content">
