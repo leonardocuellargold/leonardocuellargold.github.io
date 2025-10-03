@@ -71,13 +71,20 @@ A sophisticated, FAANG-grade portfolio website showcasing expertise in cloud inf
 
 3. **Images**: Add project images to `assets/img/projects/`
    - **Naming Convention**: Use project slug + descriptor
-     - Hero images: `[project-slug]-hero.jpg`
-     - Gallery images: `[project-slug]-1.jpg`, `[project-slug]-2.jpg`, etc.
+     - **Featured images** (for cards): `[project-slug]-hero.jpg`
+     - **Project page hero** (optional): `[project-slug]-detail-hero.jpg`
+     - **Gallery images**: `[project-slug]-1.jpg`, `[project-slug]-2.jpg`, etc.
    - **Image Specifications**: 
-     - Hero Images: 1200x600px (2:1 ratio)
-     - Gallery Images: 800x600px (4:3 ratio)
-     - Format: JPG for photos, PNG for screenshots
-     - Size: Under 200KB each (optimized for web)
+     - **Featured Images**: 1200x600px (2:1 ratio) - Used in project cards and listings
+     - **Project Hero Images**: 1600x800px (2:1 ratio) - Large hero for individual project pages
+     - **Gallery Images**: 800x600px (4:3 ratio) - Screenshots and additional visuals
+     - **Format**: JPG for photos, PNG for screenshots with transparency
+     - **Size**: Under 300KB each (optimized for web)
+   - **Image Usage in Frontmatter**:
+     ```yaml
+     featured_image: /assets/img/projects/project-slug-hero.jpg      # For cards/listings
+     hero_image: /assets/img/projects/project-slug-detail-hero.jpg   # For project page hero (optional)
+     ```
 
 #### 🔧 **Troubleshooting Image Issues**
 

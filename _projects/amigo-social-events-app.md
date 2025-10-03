@@ -4,8 +4,8 @@ subtitle: "Mobile app for discovering local events with friend-finding features"
 date: 2024-12-15
 stack: [Expo, React Native, Firebase]
 github: https://github.com/leonardocuellargold/Amigo_Website
-case_study: https://your-site/case-studies/amigo
 featured_image: /assets/img/projects/amigo-social-events-hero.jpg
+hero_image: /assets/img/projects/amigo-social-events-detail-hero.jpg
 gallery:
   - src: /assets/img/projects/amigo-social-events-1.jpg
     alt: "Amigo app home screen"
