@@ -3,14 +3,16 @@
   stack: [Expo, React Native, Firebase, GCP]
   github: https://github.com/YOUR-USERNAME/amigo
   case: /case-studies/amigo
-  link: 
+  link:
+  status: in-progress 
 
 - name: Bloom Inventory Management Webapp
   summary: Full-stack Go + MongoDB web application automating Shopify backend workflows, inventory tracking, and consignment management.
   stack: [Go, MongoDB, JavaScript, Shopify API]
   github: https://github.com/YOUR-USERNAME/bloom-inventory
   case: /case-studies/bloom
-  link: 
+  link:
+  status: completed 
 
 - name: WV Broadband Geospatial Analysis (BEAD Program)
   summary: Built geospatial dashboards and Census API pipelines to support $1.2B broadband deployment across West Virginia counties.

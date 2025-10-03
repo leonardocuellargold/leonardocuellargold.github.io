@@ -123,6 +123,47 @@ featured_image: /assets/img/projects/project-slug-hero.jpg
 ---
 ```
 
+#### 📊 **Project Status System**
+
+Add visual status badges to your projects to indicate their current state.
+
+**Available Status Options**:
+| Status | YAML Value | Badge Color | Use Case |
+|--------|------------|-------------|----------|
+| 🟢 **Completed** | `status: completed` | Green | Finished projects |
+| 🟡 **In Progress** | `status: in-progress` | Orange | Currently working |
+| 🔵 **Planning** | `status: planning` | Blue | In design/planning phase |
+| ⚫ **On Hold** | `status: on-hold` | Gray | Temporarily paused |
+| ⚪ **Archived** | `status: archived` | Light Gray | Old/deprecated projects |
+
+**Implementation**:
+```yaml
+# In _data/projects.yml
+- name: "Your Project Name"
+  summary: "Project description"
+  stack: ["Tech", "Stack"] 
+  github: "https://github.com/repo"
+  status: in-progress  # Add status field
+```
+
+**Status Badge Features**:
+- Appears in top-right corner of project cards
+- Automatically styled with appropriate colors
+- Defaults to "Completed" if no status specified
+- Supports custom status values with fallback styling
+
+**Quick Status Changes**:
+```yaml
+# Mark as In Progress
+status: in-progress
+
+# Mark as Planning Phase  
+status: planning
+
+# Mark as Complete (or omit status field)
+status: completed
+```
+
 ### Updating Experience & Certifications
 - **Experience Timeline**: Modify `_data/experience.yml`
   ```yaml

@@ -199,6 +199,32 @@ permalink: /projects/
   border-radius: var(--radius-full);
 }
 
+.badge-completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-in-progress {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-planning {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-on-hold {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.badge-archived {
+  background: #f9fafb;
+  color: #6b7280;
+}
+
+/* Legacy support */
 .badge-success {
   background: #dcfce7;
   color: #166534;
