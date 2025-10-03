@@ -76,15 +76,21 @@ A sophisticated, FAANG-grade portfolio website showcasing expertise in cloud inf
      - **Gallery images**: `[project-slug]-1.jpg`, `[project-slug]-2.jpg`, etc.
    - **Image Specifications**: 
      - **Featured Images**: 1200x600px (2:1 ratio) - Used in project cards and listings
-     - **Project Hero Images**: 1600x800px (2:1 ratio) - Large hero for individual project pages
+     - **Project Hero Images**: 1920x800px (2.4:1 ratio) - Background for project page header with overlay
      - **Gallery Images**: 800x600px (4:3 ratio) - Screenshots and additional visuals
      - **Format**: JPG for photos, PNG for screenshots with transparency
-     - **Size**: Under 300KB each (optimized for web)
+     - **Size**: Under 500KB for hero images, 300KB for others (optimized for web)
+     - **Hero Image Guidelines**: High contrast, good focal point, works well with dark overlay
    - **Image Usage in Frontmatter**:
      ```yaml
      featured_image: /assets/img/projects/project-slug-hero.jpg      # For cards/listings
-     hero_image: /assets/img/projects/project-slug-detail-hero.jpg   # For project page hero (optional)
+     hero_image: /assets/img/projects/project-slug-detail-hero.jpg   # Background header with overlay
      ```
+   - **Hero Background Effects**:
+     - Automatic dark gradient overlay (85% opacity)
+     - Backdrop blur effect (2px)
+     - White text with shadow for readability
+     - Responsive height (400px desktop, 300px mobile)
 
 #### 🔧 **Troubleshooting Image Issues**
 

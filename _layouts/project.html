@@ -3,9 +3,11 @@ layout: default
 ---
 
 <article class="project-detail">
-  <header class="project-header">
-    <h1>{{ page.title }}</h1>
-    {% if page.subtitle %}<p class="project-subtitle">{{ page.subtitle }}</p>{% endif %}
+  <header class="project-header{% if page.hero_image %} project-header-bg{% endif %}"{% if page.hero_image %} style="background-image: url('{{ page.hero_image }}')"{% endif %}>
+    <div class="project-header-overlay"></div>
+    <div class="project-header-content">
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="project-subtitle">{{ page.subtitle }}</p>{% endif %}
     
     <div class="project-meta">
       {% if page.stack %}
@@ -38,16 +40,6 @@ layout: default
       </div>
     </div>
   </header>
-
-  {% if page.hero_image %}
-    <div class="project-hero">
-      <img src="{{ page.hero_image }}" alt="{{ page.title }}" class="project-hero-image">
-    </div>
-  {% elsif page.featured_image %}
-    <div class="project-hero">
-      <img src="{{ page.featured_image }}" alt="{{ page.title }}" class="project-hero-image">
-    </div>
-  {% endif %}
 
   <div class="project-content">
     {{ content }}
