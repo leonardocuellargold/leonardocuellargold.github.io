@@ -131,3 +131,184 @@ layout: default
     </div>
   </footer>
 </article>
+
+<!-- Image Zoom Modal -->
+<div class="image-zoom-modal" id="imageZoomModal">
+  <div class="image-zoom-container">
+    <div class="image-zoom-content">
+      <img id="zoomedImage" src="" alt="">
+      <div class="image-zoom-caption" id="zoomedCaption"></div>
+    </div>
+    
+    <button class="image-zoom-close" id="closeZoomModal" aria-label="Close image">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/>
+      </svg>
+    </button>
+    
+    <button class="image-zoom-nav prev" id="prevImage" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z"/>
+      </svg>
+    </button>
+    
+    <button class="image-zoom-nav next" id="nextImage" aria-label="Next image">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 6L8.59 7.41L13.17 12L8.59 16.59L10 18L16 12L10 6Z"/>
+      </svg>
+    </button>
+    
+    <div class="image-zoom-counter" id="imageCounter"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('imageZoomModal');
+  const zoomedImage = document.getElementById('zoomedImage');
+  const zoomedCaption = document.getElementById('zoomedCaption');
+  const closeBtn = document.getElementById('closeZoomModal');
+  const prevBtn = document.getElementById('prevImage');
+  const nextBtn = document.getElementById('nextImage');
+  const counter = document.getElementById('imageCounter');
+  
+  let currentImages = [];
+  let currentIndex = 0;
+  
+  // Find all zoomable images on page load
+  function initializeZoomableImages() {
+    const contentImages = document.querySelectorAll('.project-content img, .gallery-grid img');
+    
+    contentImages.forEach((img, index) => {
+      // Skip if already processed
+      if (img.classList.contains('zoomable-processed')) return;
+      
+      img.classList.add('zoomable-image', 'zoomable-processed');
+      img.style.cursor = 'zoom-in';
+      
+      img.addEventListener('click', function() {
+        openImageModal(img, index);
+      });
+    });
+    
+    // Store all images for navigation
+    currentImages = Array.from(contentImages);
+  }
+  
+  function openImageModal(clickedImage, index) {
+    currentIndex = index;
+    updateModalImage();
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeImageModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  
+  function updateModalImage() {
+    const img = currentImages[currentIndex];
+    if (!img) return;
+    
+    zoomedImage.src = img.src;
+    zoomedImage.alt = img.alt || '';
+    
+    // Get caption from various sources
+    let caption = '';
+    const figcaption = img.closest('figure')?.querySelector('figcaption');
+    const galleryCaption = img.parentElement?.querySelector('.gallery-caption');
+    const titleAttr = img.getAttribute('title');
+    
+    if (figcaption) {
+      caption = figcaption.textContent;
+    } else if (galleryCaption) {
+      caption = galleryCaption.textContent;
+    } else if (titleAttr) {
+      caption = titleAttr;
+    } else if (img.alt && img.alt !== '') {
+      caption = img.alt;
+    }
+    
+    zoomedCaption.textContent = caption;
+    
+    // Update counter
+    counter.textContent = `${currentIndex + 1} of ${currentImages.length}`;
+    
+    // Update navigation buttons
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === currentImages.length - 1;
+    
+    // Hide navigation if only one image
+    if (currentImages.length <= 1) {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+      counter.style.display = 'none';
+    } else {
+      prevBtn.style.display = 'flex';
+      nextBtn.style.display = 'flex';
+      counter.style.display = 'block';
+    }
+  }
+  
+  function showPreviousImage() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateModalImage();
+    }
+  }
+  
+  function showNextImage() {
+    if (currentIndex < currentImages.length - 1) {
+      currentIndex++;
+      updateModalImage();
+    }
+  }
+  
+  // Event listeners
+  closeBtn.addEventListener('click', closeImageModal);
+  prevBtn.addEventListener('click', showPreviousImage);
+  nextBtn.addEventListener('click', showNextImage);
+  
+  // Close on background click
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeImageModal();
+    }
+  });
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (!modal.classList.contains('active')) return;
+    
+    switch(e.key) {
+      case 'Escape':
+        closeImageModal();
+        break;
+      case 'ArrowLeft':
+        showPreviousImage();
+        break;
+      case 'ArrowRight':
+        showNextImage();
+        break;
+    }
+  });
+  
+  // Initialize on page load
+  initializeZoomableImages();
+  
+  // Reinitialize when content changes (for dynamic content)
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'childList') {
+        initializeZoomableImages();
+      }
+    });
+  });
+  
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+});
+</script>
