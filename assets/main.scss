@@ -2404,4 +2404,39 @@ footer { margin-top: 3rem; font-size: .75rem; color: var(--text-soft); }
   }
 }
 
+/* === SKILL CATEGORIES STYLING === */
+.skill-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-category {
+  h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-categories {
+    gap: 1rem;
+  }
+  
+  .skill-category h4 {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
 @media print { nav, footer { display:none !important; } body { background:#fff; } .card { box-shadow:none; } }
