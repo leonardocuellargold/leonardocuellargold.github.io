@@ -25,6 +25,8 @@ permalink: /projects/
       <button class="category-filter" data-category="data">Data & Analytics</button>
       <button class="category-filter" data-category="automation">Automation</button>
       <button class="category-filter" data-category="cloud">Cloud & Infrastructure</button>
+      <button class="category-filter" data-category="security">Security</button>
+      <button class="category-filter" data-category="education">Education</button>
     </div>
   </div>
 
@@ -36,7 +38,43 @@ permalink: /projects/
       
       <article class="project-card card-interactive hover-lift animate-fade-up" 
                style="animation-delay: {{ forloop.index | times: 0.1 }}s"
-               data-category="{% assign categories = '' %}{% for tech in p.stack %}{% if tech contains 'React Native' or tech contains 'Expo' %}{% assign categories = categories | append: 'mobile ' %}{% endif %}{% if tech contains 'Go' or tech contains 'MongoDB' or tech contains 'JavaScript' or tech contains 'Jekyll' or tech contains 'HTML/CSS' or tech contains 'Swing' %}{% assign categories = categories | append: 'web ' %}{% endif %}{% if tech contains 'Python' and (tech contains 'GIS' or tech contains 'DataViz' or tech contains 'Census') or tech contains 'Tableau' or tech contains 'SQL' %}{% assign categories = categories | append: 'data ' %}{% endif %}{% if tech contains 'Google Apps Script' or tech contains 'Power Automate' or tech contains 'Selenium' or tech contains 'Airtable API' or tech contains 'Shopify API' %}{% assign categories = categories | append: 'automation ' %}{% endif %}{% if tech contains 'GCP' or tech contains 'Firebase' or tech contains 'Firestore' or tech contains 'GitHub Pages' %}{% assign categories = categories | append: 'cloud ' %}{% endif %}{% endfor %}{% if categories == '' %}web{% else %}{{ categories | strip }}{% endif %}">
+               data-category="{% comment %}
+                 Build categories dynamically based on stack/name keywords.
+                 Tokens: web, mobile, data, automation, cloud, security, education
+               {% endcomment %}
+               {% assign categories = '' %}
+               {% for tech in p.stack %}
+                 {% assign t = tech | downcase %}
+                 {%- if t contains 'react native' or t contains 'expo' -%}
+                   {% unless categories contains 'mobile ' %}{% assign categories = categories | append: 'mobile ' %}{% endunless %}
+                 {%- endif -%}
+                 {%- if t contains 'go' or t contains 'mongodb' or t contains 'javascript' or t contains 'jekyll' or t contains 'html' or t contains 'css' or t contains 'ruby' or t contains 'liquid' or t contains 'git' or t contains 'swing' or t == 'java' -%}
+                   {% unless categories contains 'web ' %}{% assign categories = categories | append: 'web ' %}{% endunless %}
+                 {%- endif -%}
+                 {%- if t contains 'python' or t contains 'census' or t contains 'gis' or t contains 'dataviz' or t contains 'sql' or t contains 'tableau' -%}
+                   {% unless categories contains 'data ' %}{% assign categories = categories | append: 'data ' %}{% endunless %}
+                 {%- endif -%}
+                 {%- if t contains 'google apps script' or t contains 'power automate' or t contains 'selenium' or t contains 'airtable api' or t contains 'shopify api' or t contains 'notion' -%}
+                   {% unless categories contains 'automation ' %}{% assign categories = categories | append: 'automation ' %}{% endunless %}
+                 {%- endif -%}
+                 {%- if t contains 'gcp' or t contains 'firebase' or t contains 'firestore' or t contains 'github pages' -%}
+                   {% unless categories contains 'cloud ' %}{% assign categories = categories | append: 'cloud ' %}{% endunless %}
+                 {%- endif -%}
+                 {%- if t contains 'security' or t contains 'hipaa' or t contains 'encryption' -%}
+                   {% unless categories contains 'security ' %}{% assign categories = categories | append: 'security ' %}{% endunless %}
+                 {%- endif -%}
+                 {%- if t contains 'docs-as-code' -%}
+                   {% unless categories contains 'education ' %}{% assign categories = categories | append: 'education ' %}{% endunless %}
+                 {%- endif -%}
+               {% endfor %}
+               {%- assign name_lc = p.name | downcase -%}
+               {%- if name_lc contains 'workshop' or name_lc contains 'series' -%}
+                 {% unless categories contains 'education ' %}{% assign categories = categories | append: 'education ' %}{% endunless %}
+               {%- endif -%}
+               {%- if name_lc contains 'lms' or name_lc contains 'migration' and p.stack contains 'LMS' -%}
+                 {% unless categories contains 'education ' %}{% assign categories = categories | append: 'education ' %}{% endunless %}
+               {%- endif -%}
+               {%- if categories == '' -%}web{%- else -%}{{ categories | strip }}{%- endif -%}">
         
         <!-- Project Image -->
         <div class="project-image-container">
@@ -80,6 +118,9 @@ permalink: /projects/
               <span class="badge">{{ tech }}</span>
             {% endfor %}
           </div>
+
+          <!-- Derived Categories (filled client-side for maintainability) -->
+          <div class="project-categories-inline" aria-hidden="true"></div>
           
           <!-- Project Links -->
           <div class="project-links">
@@ -248,6 +289,26 @@ permalink: /projects/
   margin: var(--space-1) 0 0 0;
 }
 
+.project-categories-inline {
+  margin-top: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.project-categories-inline .cat-chip {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
 .cta-section {
   margin-top: var(--space-20);
 }
@@ -282,17 +343,49 @@ document.addEventListener('DOMContentLoaded', function() {
       filterButtons.forEach(btn => btn.classList.remove('active'));
       this.classList.add('active');
       
-      // Filter project cards
+      // Filter project cards (supports multi-category tokens)
       projectCards.forEach(card => {
-        const cardCategory = card.dataset.category;
-        
-        if (targetCategory === 'all' || cardCategory === targetCategory) {
-          card.style.display = 'block';
-          card.style.animation = 'fadeInUp 0.6s ease forwards';
+        const raw = card.dataset.category || '';
+        const tokens = raw.split(/\s+/).filter(Boolean);
+        const match = targetCategory === 'all' || tokens.includes(targetCategory);
+        if (match) {
+          if (card.style.display === 'none') {
+            card.style.display = 'block';
+            requestAnimationFrame(() => {
+              card.style.opacity = '0';
+              card.style.transition = 'opacity 0.25s ease';
+              requestAnimationFrame(() => { card.style.opacity = '1'; });
+            });
+          }
         } else {
           card.style.display = 'none';
         }
       });
+    });
+  });
+
+  // Render category chips client-side (keeps Liquid simpler)
+  projectCards.forEach(card => {
+    const target = card.querySelector('.project-categories-inline');
+    if (!target) return;
+    const raw = (card.dataset.category || '').trim();
+    if (!raw) return;
+    const unique = Array.from(new Set(raw.split(/\s+/)));
+    unique.forEach(token => {
+      const span = document.createElement('span');
+      span.className = 'cat-chip';
+      // Human-readable labels
+      const labelMap = {
+        web: 'Web',
+        mobile: 'Mobile',
+        data: 'Data',
+        automation: 'Automation',
+        cloud: 'Cloud',
+        security: 'Security',
+        education: 'Education'
+      };
+      span.textContent = labelMap[token] || token;
+      target.appendChild(span);
     });
   });
 });
