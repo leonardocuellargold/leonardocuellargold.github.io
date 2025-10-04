@@ -27,6 +27,19 @@ permalink: /projects/
       <button class="category-filter" data-category="cloud">Cloud & Infrastructure</button>
       <button class="category-filter" data-category="security">Security</button>
       <button class="category-filter" data-category="education">Education</button>
+      <button class="category-filter clear-filters" data-action="clear" style="display:none;">Clear</button>
+    </div>
+    <div class="category-legend">
+      <span class="legend-label">Tip: Select multiple categories to broaden results (OR logic). Use Clear or All to reset.</span>
+      <div class="legend-chips">
+        <span class="cat-chip legend" data-cat="web">Web</span>
+        <span class="cat-chip legend" data-cat="mobile">Mobile</span>
+        <span class="cat-chip legend" data-cat="data">Data</span>
+        <span class="cat-chip legend" data-cat="automation">Automation</span>
+        <span class="cat-chip legend" data-cat="cloud">Cloud</span>
+        <span class="cat-chip legend" data-cat="security">Security</span>
+        <span class="cat-chip legend" data-cat="education">Education</span>
+      </div>
     </div>
   </div>
 
@@ -187,6 +200,7 @@ permalink: /projects/
   padding: var(--space-1);
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-primary);
+  flex-wrap: wrap;
 }
 
 .category-filter {
@@ -309,6 +323,43 @@ permalink: /projects/
   font-weight: 600;
 }
 
+.category-legend {
+  width: 100%;
+  margin-top: var(--space-4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.category-legend .legend-label {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary, var(--text-secondary));
+  opacity: 0.8;
+}
+
+.legend-chips {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cat-chip.legend {
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-primary);
+  cursor: default;
+}
+
+.category-filter.clear-filters {
+  background: var(--danger-50, #fee2e2);
+  color: var(--danger-700, #991b1b);
+}
+.category-filter.clear-filters:hover {
+  background: var(--danger-100, #fecaca);
+  color: var(--danger-800, #7f1d1d);
+}
+
 .cta-section {
   margin-top: var(--space-20);
 }
@@ -334,35 +385,78 @@ permalink: /projects/
 document.addEventListener('DOMContentLoaded', function() {
   const filterButtons = document.querySelectorAll('.category-filter');
   const projectCards = document.querySelectorAll('.project-card');
+  const clearButton = document.querySelector('.category-filter.clear-filters');
+  const allButton = document.querySelector('.category-filter[data-category="all"]');
+  const categoryButtons = Array.from(filterButtons).filter(b => b.dataset.category && b.dataset.category !== 'all');
+  const counts = {}; // total counts per category
+
+  // Precompute counts
+  projectCards.forEach(card => {
+    (card.dataset.category || '').split(/\s+/).filter(Boolean).forEach(tok => {
+      counts[tok] = (counts[tok] || 0) + 1;
+    });
+  });
+  // Append counts to button labels
+  categoryButtons.forEach(btn => {
+    const cat = btn.dataset.category;
+    if (counts[cat]) {
+      btn.innerHTML = btn.textContent + ` <span class="count">(${counts[cat]})`;
+    }
+  });
+
+  function applyFilter() {
+    const activeCats = categoryButtons
+      .filter(b => b.classList.contains('active'))
+      .map(b => b.dataset.category);
+
+    const useAll = activeCats.length === 0;
+    // Manage All button state
+    if (useAll) {
+      allButton.classList.add('active');
+      clearButton.style.display = 'none';
+    } else {
+      allButton.classList.remove('active');
+      clearButton.style.display = 'inline-block';
+    }
+
+    projectCards.forEach(card => {
+      const tokens = (card.dataset.category || '').split(/\s+/).filter(Boolean);
+      const match = useAll || tokens.some(t => activeCats.includes(t)); // OR logic
+      if (match) {
+        if (card.style.display === 'none') {
+          card.style.display = 'block';
+          requestAnimationFrame(() => {
+            card.style.opacity = '0';
+            card.style.transition = 'opacity 0.25s ease';
+            requestAnimationFrame(() => { card.style.opacity = '1'; });
+          });
+        }
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
   
   filterButtons.forEach(button => {
     button.addEventListener('click', function() {
-      const targetCategory = this.dataset.category;
-      
-      // Update active filter button
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      this.classList.add('active');
-      
-      // Filter project cards (supports multi-category tokens)
-      projectCards.forEach(card => {
-        const raw = card.dataset.category || '';
-        const tokens = raw.split(/\s+/).filter(Boolean);
-        const match = targetCategory === 'all' || tokens.includes(targetCategory);
-        if (match) {
-          if (card.style.display === 'none') {
-            card.style.display = 'block';
-            requestAnimationFrame(() => {
-              card.style.opacity = '0';
-              card.style.transition = 'opacity 0.25s ease';
-              requestAnimationFrame(() => { card.style.opacity = '1'; });
-            });
-          }
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      if (this.dataset.action === 'clear') {
+        categoryButtons.forEach(b => b.classList.remove('active'));
+        applyFilter();
+        return;
+      }
+      const cat = this.dataset.category;
+      if (cat === 'all') {
+        categoryButtons.forEach(b => b.classList.remove('active'));
+        applyFilter();
+        return;
+      }
+      // Toggle state
+      this.classList.toggle('active');
+      applyFilter();
     });
   });
+
+  applyFilter();
 
   // Render category chips client-side (keeps Liquid simpler)
   projectCards.forEach(card => {
