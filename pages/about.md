@@ -100,46 +100,7 @@ permalink: /about/
       </p>
     </div>
   </section>
-
-  <!-- Continuous Learning -->
-  <section class="involvement-section animate-fade-up" style="animation-delay: 0.4s">
-    <div class="section-header">
-      <h2 class="section-title">Professional Experience Highlights</h2>
-      <p class="section-subtitle">
-        Building impactful solutions across consulting, technology, and entrepreneurship with measurable results.
-      </p>
-    </div>
-    
-    <div class="involvement-grid">
-      <div class="involvement-card card">
-        <h3>Consulting & Corporate Experience</h3>
-        <ul>
-          <li><strong>West Monroe</strong> (Tech & Strategy – Infra/Cyber) — Modeled infrastructure synergies, supported carve-outs, created executive deliverables</li>
-          <li><strong>IBM</strong> (Application Consultant Intern) — Forecasting tooling, program savings, and AI-assisted document analysis</li>
-          <li><strong>Data Driven WV</strong> — Geospatial modeling for WV's BEAD program; dashboards and fair-bidding packaging strategies</li>
-        </ul>
-      </div>
-
-      <div class="involvement-card card">
-        <h3>Technology Projects & Impact</h3>
-        <ul>
-          <li><strong>Those Who Bloom</strong> — Full-stack inventory/operations tooling (Go + MongoDB + Shopify API)</li>
-          <li><strong>Loudoun Cares</strong> — Secure document intake automation with Apps Script and web hardening</li>
-          <li><strong>500Rising</strong> — CMS/LMS migration research emphasizing encryption, authentication, and security</li>
-        </ul>
-      </div>
-
-      <div class="involvement-card card">
-        <h3>Leadership & Entrepreneurship</h3>
-        <ul>
-          <li><strong>CookieIO Co-founder</strong> — 550+ orders, $44k+ revenue, 50% margins; automated end-to-end operations</li>
-          <li><strong>MISA Program Experiential Learning VP</strong> — Organize hands-on learning opportunities beyond classroom curriculum</li>
-          <li><strong>Knowledge Transfer Series (KTS) Founder</strong> — Created workshops on technologies and career paths for underclassmen</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
+  
   <!-- Continuous Learning -->
   <section class="learning-section animate-fade-up" style="animation-delay: 0.5s; margin-top: 4rem;">
     <div class="section-header">
