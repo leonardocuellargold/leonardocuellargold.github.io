@@ -180,12 +180,14 @@ permalink: /about/
         <div class="interest-icon">🚀</div>
         <h3>Building Ventures</h3>
         <p>Always tinkering with new ideas and exploring entrepreneurial opportunities</p>
+      </div>
       
       <div class="interest-card card">
         <div class="interest-icon">✈️</div>
         <h3>Travel</h3>
         <p>New places = new perspectives. Each trip reshapes how I approach problems</p>
       </div>
+      
       <div class="interest-card card">
         <div class="interest-icon">🎵</div>
         <h3>Music</h3>
