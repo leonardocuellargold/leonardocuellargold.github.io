@@ -187,12 +187,13 @@ permalink: /about/
         <h3>Travel</h3>
         <p>New places = new perspectives. Each trip reshapes how I approach problems</p>
       </div>
-      
+
       <div class="interest-card card">
         <div class="interest-icon">🎵</div>
         <h3>Music</h3>
         <p>Latin, rap, rock, EDM, and instrumental playlists fuel my work sessions and creativity</p>
-      </div> 
+      </div>
+    </div>
   </section>
 
   <!-- Call to Action -->

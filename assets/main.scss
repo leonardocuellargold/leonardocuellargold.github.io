@@ -359,18 +359,36 @@ p {
   font-weight: 500;
   transition: all 0.2s ease;
   padding: 0.5rem 1rem;
-  border-radius: var(--radius-sm);
   position: relative;
+  
+  /* Elegant underline animation */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateX(-50%);
+  }
   
   &:hover {
     color: var(--accent);
-    background: rgba(255, 107, 107, 0.05);
+    
+    &::after {
+      width: 80%;
+    }
   }
   
   &.active {
     color: var(--accent);
     font-weight: 600;
-    background: rgba(255, 107, 107, 0.08);
+    
+    &::after {
+      width: 100%;
+    }
   }
 }
 
@@ -468,16 +486,7 @@ p {
     background: var(--text-primary);
   }
   
-  /* Desktop navigation dark theme */
-  .nav-links .page-link {
-    &:hover {
-      background: rgba(255, 107, 107, 0.08);
-    }
-    
-    &.active {
-      background: rgba(255, 107, 107, 0.12);
-    }
-  }
+  /* Desktop navigation dark theme - underline animations work the same in dark mode */
   
   /* Mobile navigation dark theme */
   @media (max-width: 768px) {
