@@ -7,7 +7,8 @@ permalink: /about/
 <div class="container">
   <!-- Page Header -->
   <section class="section-header animate-fade-up">
-    <div class="profile-image-container">
+    <div class="profile-header">
+      <div class="profile-image-container">
         <img src="/assets/img/Headshot_Leo.jpg" alt="Leonardo Cuellar" class="profile-image">
       </div>
       <div class="profile-content">
