@@ -2439,4 +2439,61 @@ footer { margin-top: 3rem; font-size: .75rem; color: var(--text-soft); }
   }
 }
 
+/* === PERSONAL BACKGROUND SECTION === */
+.personal-background {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  
+  .background-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* === SECTION SPACING === */
+.about-overview,
+.learning-section,
+.interests-section,
+.cta-section {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* === CTA SECTION STYLING FIX === */
+.cta-section {
+  background: none !important;
+  
+  .section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    margin-bottom: 1rem;
+  }
+  
+  .section-subtitle {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .personal-background .background-content p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
 @media print { nav, footer { display:none !important; } body { background:#fff; } .card { box-shadow:none; } }

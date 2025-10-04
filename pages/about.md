@@ -82,7 +82,67 @@ permalink: /about/
     </div>
   </section>
 
-  <!-- Professional Involvement -->
+  <!-- Personal Background -->
+  <section class="personal-background animate-fade-up" style="animation-delay: 0.3s">
+    <div class="section-header">
+      <h2 class="section-title">My Journey</h2>
+      <p class="section-subtitle">
+        From Mexico to the US — a path that shaped my perspective on technology, innovation, and community impact.
+      </p>
+    </div>
+    
+    <div class="background-content card">
+      <p>
+        Born and raised in Mexico, I completed my early education at Prepa TEC before moving to the United States at 18. I finished my senior year of high school in Laredo, Texas, and am now pursuing my MIS & Accounting degree at West Virginia University, expected to graduate in December 2025.
+      </p>
+      <p>
+        This cross-cultural journey has given me a unique perspective on problem-solving and innovation. As a Latino in technology, I'm passionate about creating opportunities for underrepresented communities and building bridges between diverse perspectives. My background has taught me to approach challenges with resilience, adaptability, and a deep appreciation for the power of technology to transform communities.
+      </p>
+    </div>
+  </section>
+
+  <!--
+  Professional Experience Highlights - Commenting out as information is covered elsewhere
+  <section class="involvement-section animate-fade-up" style="animation-delay: 0.4s">
+    <div class="section-header">
+      <h2 class="section-title">Professional Experience Highlights</h2>
+      <p class="section-subtitle">
+        Building impactful solutions across consulting, technology, and entrepreneurship with measurable results.
+      </p>
+    </div>
+    
+    <div class="involvement-grid">
+      <div class="involvement-card card">
+        <h3>Consulting & Corporate Experience</h3>
+        <ul>
+          <li><strong>West Monroe</strong> (Tech & Strategy – Infra/Cyber) — Modeled infrastructure synergies, supported carve-outs, created executive deliverables</li>
+          <li><strong>IBM</strong> (Application Consultant Intern) — Forecasting tooling, program savings, and AI-assisted document analysis</li>
+          <li><strong>Data Driven WV</strong> — Geospatial modeling for WV's BEAD program; dashboards and fair-bidding packaging strategies</li>
+        </ul>
+      </div>
+
+      <div class="involvement-card card">
+        <h3>Technology Projects & Impact</h3>
+        <ul>
+          <li><strong>Those Who Bloom</strong> — Full-stack inventory/operations tooling (Go + MongoDB + Shopify API)</li>
+          <li><strong>Loudoun Cares</strong> — Secure document intake automation with Apps Script and web hardening</li>
+          <li><strong>500Rising</strong> — CMS/LMS migration research emphasizing encryption, authentication, and security</li>
+        </ul>
+      </div>
+
+      <div class="involvement-card card">
+        <h3>Leadership & Entrepreneurship</h3>
+        <ul>
+          <li><strong>CookieIO Co-founder</strong> — 550+ orders, $44k+ revenue, 50% margins; automated end-to-end operations</li>
+          <li><strong>MISA Program Experiential Learning VP</strong> — Organize hands-on learning opportunities beyond classroom curriculum</li>
+          <li><strong>Knowledge Transfer Series (KTS) Founder</strong> — Created workshops on technologies and career paths for underclassmen</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Continuous Learning -->
   <section class="involvement-section animate-fade-up" style="animation-delay: 0.4s">
     <div class="section-header">
       <h2 class="section-title">Professional Experience Highlights</h2>
@@ -122,7 +182,7 @@ permalink: /about/
   </section>
 
   <!-- Continuous Learning -->
-  <section class="learning-section animate-fade-up" style="animation-delay: 0.6s">
+  <section class="learning-section animate-fade-up" style="animation-delay: 0.5s; margin-top: 4rem;">
     <div class="section-header">
       <h2 class="section-title">Continuous Learning</h2>
       <p class="section-subtitle">
@@ -182,7 +242,7 @@ permalink: /about/
   </section>
 
   <!-- Personal Interests -->
-  <section class="interests-section animate-fade-up" style="animation-delay: 0.8s">
+  <section class="interests-section animate-fade-up" style="animation-delay: 0.7s; margin-top: 4rem;">
     <div class="section-header">
       <h2 class="section-title">Beyond Work</h2>
       <p class="section-subtitle">
@@ -212,17 +272,21 @@ permalink: /about/
       <div class="interest-card card">
         <div class="interest-icon">�</div>
         <h3>Music</h3>
-        <p>Rap, rock, EDM, and instrumental playlists fuel my work sessions and creativity</p>
+        <p>Latin, rap, rock, EDM, and instrumental playlists fuel my work sessions and creativity</p>
       </div>
     </div>
   </section>
 
   <!-- Call to Action -->
-  <section class="cta-section animate-fade-up" style="animation-delay: 1.0s">
-    <div class="cta-content">
-      <h2>Ready to Collaborate?</h2>
-      <p>I'm open to collaborations in cloud, data, and digital transformation. If you need a builder who can translate strategy into shipped systems—with clear metrics and clean handoffs—let's talk.</p>
-      <a href="/contact/" class="btn btn-primary">Let's Work Together</a>
+  <section class="cta-section animate-fade-up" style="animation-delay: 0.9s; margin-top: 4rem;">
+    <div class="section-header">
+      <h2 class="section-title">Ready to Collaborate?</h2>
+      <p class="section-subtitle">
+        I'm open to collaborations in cloud, data, and digital transformation. If you need a builder who can translate strategy into shipped systems—with clear metrics and clean handoffs—let's talk.
+      </p>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="/contact/" class="btn btn-primary">Let's Work Together</a>
+      </div>
     </div>
   </section>
 </div>
