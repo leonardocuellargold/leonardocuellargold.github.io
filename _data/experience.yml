@@ -8,7 +8,7 @@
     - Facilitated IT leadership workshops with CIOs, CTOs, and senior executives of both organizations to validate consolidation models and secure alignment with minimal pushback.
     - Drove $20M+ in follow-on consulting work through actionable presentations and proposals.
     - Executed an IT carve-out migration for a PE-backed manufacturer, overseeing network cutovers and workstation migrations.
-  blog_post: "/blog/2025/06/15/west-monroe-infrastructure-cybersecurity-internship/"
+  blog_post: 
 
 - title: Tax Preparer Seasonal Intern – Wealth Management Tax Services
   org: PwC
@@ -18,7 +18,7 @@
     - Processed 800+ federal and state tax forms for banking client, resolving diagnostics to enable compliance automation.
     - Developed Python automation script for data cleaning, doubling tax-preparation efficiency.
     - Designed firm-wide Alteryx/VBA liability forecasting tool, improving accuracy and reducing manual effort by 80%.
-  blog_post: "/blog/2025/04/15/pwc-tax-internship/"
+  blog_post: 
 
 - title: Application Consultant Intern – Hybrid Cloud Services
   org: IBM
@@ -29,7 +29,7 @@
     - Presented strategic initiative embedding 30% saving into program’s five-year roadmap.
     - Leveraged watsonx.ai in IBM Challenge, achieving 99.3% efficiency in contract analysis and redaction.
     - Co-led IBM + Google Cloud NYC Summit support.
-  blog_post: "/blog/2024/08/30/ibm-consultant-intern-cloud-summit/"
+  blog_post: 
 
 - title: Digital Transformation Lead
   org: Data Driven WV – Nemacolin
@@ -39,7 +39,7 @@
     - Built no-code solution automating resort donations using digital wallets, boosting efficiency 10X while using only 1% of budget.
     - Integrated automated tracking and analytics tools into resort’s tech ecosystem to improve governance.
     - Conducted audits, gathered requirements, and facilitated staff adoption.
-  blog_post: "/blog/2025/01/25/nemacolin-digital-transformation/"
+  blog_post: 
 
 - title: Developer
   org: Those Who Bloom
@@ -49,7 +49,7 @@
     - Engineered full-stack inventory management system using JavaScript, MongoDB, and Golang.
     - Automated Shopify backend workflows with APIs and Apps Script, reducing manual work by 95%.
     - Documented solutions, streamlined payroll and consignment processes, boosting efficiency.
-  blog_post: "/blog/2024/08/01/those-who-bloom-inventory-project/"
+  blog_post: "/projects/bloom-inventory-management-webapp/"
 
 - title: Cybersecurity Project Manager
   org: Data Driven WV – Loudoun Cares
@@ -58,7 +58,7 @@
   points:
     - Built Google Apps Script web app automating document intake and security audits.
     - Implemented WAF, updated plugins, and closed vulnerabilities on WordPress site.
-  blog_post: "/blog/2024/05/10/loudoun-cares-cybersecurity/"
+  blog_post: 
 
 - title: Business Intelligence Project Manager
   org: Data Driven WV – WesBanco
@@ -67,7 +67,7 @@
   points:
     - Designed Qlik Sense geospatial dashboards analyzing branch expansions with ranking formula.
     - Led BI project, delegated tasks, and presented insights to bank executives.
-  blog_post: "/blog/2024/04/01/wesbanco-business-intelligence/"
+  blog_post: 
 
 - title: Project Manager
   org: Data Driven WV – Accelerated Visions / 500 Rising
@@ -76,7 +76,7 @@
   points:
     - Managed Agile CMS/LMS migration project for women’s self-defense tutorials.
     - Researched authentication and encryption-focused platforms for secure delivery.
-  blog_post: "/blog/2024/03/15/500rising-cms-project/"
+  blog_post: 
 
 - title: Research Assistant
   org: WV State Office of Broadband – BEAD Program
@@ -86,7 +86,7 @@
     - Supported deployment of $1.2B in federal broadband funds.
     - Built Python scripts for Census API to streamline demographic data collection.
     - Converted R workflows into Python pipelines for analytics and visualization.
-  blog_post: "/blog/2023/11/15/bead-program-research/"
+  blog_post: "/projects/wv-broadband-geospatial-analysis-bead-program/"
 
 - title: Co-Founder
   org: CookieIO
@@ -100,4 +100,4 @@
     - Managed accounting, cut expenses 15%, and raised sales 20%.
     - Implemented multilingual 24/7 customer support and Discord loyalty systems.
     - Fully automated and streamlined operations, reducing workload from 5 hrs/day to <4 hrs/week.
-  blog_post: "/blog/2022/02/15/cookieio-journey/"
+  blog_post: 
