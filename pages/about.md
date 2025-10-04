@@ -7,11 +7,18 @@ permalink: /about/
 <div class="container">
   <!-- Page Header -->
   <section class="section-header animate-fade-up">
-    <h1 class="section-title">About Leonardo</h1>
-    <p class="section-subtitle">
-      Passionate about cloud technology, data analytics, and strategic consulting. 
-      Building practical solutions that bridge business needs with technical capabilities.
-    </p>
+    <div class="profile-header">
+      <div class="profile-image-container">
+        <img src="/assets/img/Headshot_Leo.jpg" alt="Leonardo Cuellar" class="profile-image">
+      </div>
+      <div class="profile-content">
+        <h1 class="section-title">About Leonardo</h1>
+        <p class="section-subtitle">
+          Passionate about cloud technology, data analytics, and strategic consulting. 
+          Building practical solutions that bridge business needs with technical capabilities.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- Background & Skills -->

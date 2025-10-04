@@ -2333,4 +2333,82 @@ footer { margin-top: 3rem; font-size: .75rem; color: var(--text-soft); }
   }
 }
 
+/* === PROFILE IMAGE STYLING === */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-image-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-primary);
+  box-shadow: 
+    0 0 0 2px var(--primary-200),
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 
+      0 0 0 2px var(--accent-300),
+      0 12px 48px rgba(0, 0, 0, 0.15),
+      0 6px 24px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.profile-content {
+  flex: 1;
+  
+  .section-title {
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-subtitle {
+    margin-bottom: 0;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Dark Theme Profile Adjustments */
+@media (prefers-color-scheme: dark) {
+  .profile-image {
+    border-color: var(--bg-secondary);
+    box-shadow: 
+      0 0 0 2px var(--primary-700),
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 4px 16px rgba(0, 0, 0, 0.2);
+    
+    &:hover {
+      box-shadow: 
+        0 0 0 2px var(--accent-400),
+        0 12px 48px rgba(0, 0, 0, 0.4),
+        0 6px 24px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
 @media print { nav, footer { display:none !important; } body { background:#fff; } .card { box-shadow:none; } }

@@ -1,15 +1,15 @@
 - name: Amigo — Social Events App
   summary: Mobile app to discover and share local events with map + feed UI and friend-finding, designed for spontaneous social activities.
   stack: [Expo, React Native, Firebase, GCP]
-  github: https://github.com/leonardocuellargold/Amigo_Website
+  github: 
   case: /case-studies/amigo
-  link:
+  link: https://www.toamigo.com/
   status: in-progress 
 
 - name: Bloom Inventory Management Webapp
   summary: Full-stack Go + MongoDB web application automating Shopify backend workflows, inventory tracking, and consignment management.
   stack: [Go, MongoDB, JavaScript, Shopify API]
-  github: https://github.com/leonardocuellargold/bloom-inventory
+  github:
   case: /case-studies/bloom
   link:
 
@@ -81,3 +81,4 @@
   github: https://github.com/leonardocuellargold/Jekyll-GitHub-Pages-Website-Workshop
   case: 
   link: 
+  featured_image: /assets/img/projects/Website-Workshop-Hero.jpg

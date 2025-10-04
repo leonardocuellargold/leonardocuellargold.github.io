@@ -24,75 +24,80 @@ gallery:
     caption: "Admin view to manage documents for projects"
 ---
 
-## From Prototype to Production — In the Cloud, Securely
+## Why I Built This
 
-This was one of those projects that started from a simple idea: build a portal where consulting projects, clients, milestones, and invoices could be easily tracked. But the execution had to be clean, fast, and *secure*.
+During my consulting work, I found that many small agencies and freelancers — myself included — still juggle spreadsheets, Google Docs, and emails to track projects, invoices, and client communications. These tools are familiar, but they don’t scale well. There's always a risk of something slipping through the cracks.
 
-No hardcoded tokens. No clunky interfaces. And definitely no skipping dev best practices.
-
-I built this portal using Go for the backend (yes, *Golang* still slaps), Firebase for auth and storage, and deployed it all on Cloud Run and GCP Buckets. The frontend is statically hosted and optimized for speed, while the backend handles all logic and sensitive interactions like Firebase Admin SDK usage, hidden behind secrets.
+The Consulting Portal was born out of the need for something simple, clean, and secure. I didn’t want to over-engineer a solution — just build a robust foundation to manage workflows, roles, and basic reporting across clients and projects.
 
 ---
 
-## The Stack I Assembled
+## What It Does
 
-- **Backend in Go**: Built with clear modularity under `cmd/server/main.go`, serving routes and managing sessions.
-- **Firebase Auth + Admin SDK**: Login, protected project routes, and write access all verified securely.
-- **Cloud Run**: Handles backend traffic behind HTTPS with secret-managed tokens.
-- **GCP Secret Manager**: Firebase service account lives here — no credentials in sight.
-- **Static Bucket Deployment**: All HTML, CSS, and JS assets are served via GCP's global CDN.
-- **CI/CD via Cloud Build**: One command, no drama.
+This web application serves as an internal portal for consulting teams to:
+
+- **Track ongoing projects**, including client details, status updates, and financials.
+- **Manage invoices** and billing history in a secure interface.
+- **Authenticate users via Firebase**, enabling role-based permissions for admins and contributors.
+- **Leverage a Go backend**, hosted on Cloud Run, to handle secure API routing, token validation, and database interactions.
+- **Serve a static frontend** from a GCP bucket for fast performance and low cost.
+
+The result is a clean experience for both backend and frontend users — secure, fast, and focused.
 
 ---
 
 ## Key Highlights
 
-### Firebase Secrets with Cloud Run
+### Secure and Token-Aware
 
-I didn’t want to ever worry about accidentally exposing my Firebase private key. Using **GCP Secrets**, I stored the entire service account as a secret, and injected it into the container during build-time.
+Authentication and role management are handled via Firebase, with the backend validating tokens before any protected resource is returned. I used [Gorilla Sessions](https://www.gorillatoolkit.org/pkg/sessions) in the Go backend to manage user sessions cleanly, which was critical for avoiding issues like “missing token” errors and managing login state server-side.
 
-In my `cloudbuild.yaml`, it looks like this:
+### Cloud Native and Scalable
 
-```yaml
---set-secrets=FIREBASE_CONFIG=firebase-service-account:latest
-```
+All backend services are deployed to Google Cloud Run, with Secret Manager providing secure key storage. This lets me keep sensitive credentials out of my environment and deploy updates confidently without hardcoding anything.
 
-Then, in Go, I pulled it using `secretmanager.NewClient` and unmarshalled it into the Firebase admin config. No `.json` files anywhere in the repo.
+### Clean Separation of Frontend and Backend
+
+The frontend is completely static — meaning it’s fast and deployable to a bucket with versioned control. All business logic is handled via fetch calls to the Cloud Run API endpoint, keeping things modular and scalable.
+
+### Update-Friendly Static Hosting
+
+Because the frontend is hosted in a GCP bucket, it’s easy to update with a single sync command. This has made testing and iteration faster, especially while refining login behavior and fetch credential policies.
 
 ---
 
-### 🛠️ Clean Frontend–Backend Separation
+## What I Learned
 
-My HTML and JS files live in the `/web` folder and get deployed to the GCP bucket with:
+### CORS and Credential Handling
 
-```bash
-gsutil rsync -R ./web gs://www.b1tsolutions.com
-```
+One of the trickiest aspects was ensuring the frontend and backend could talk to each other securely, without throwing CORS or session errors. Firebase Auth requires tokens to be passed explicitly in headers, and sessions must be managed consistently across environments.
 
-All `fetch()` calls were updated to use a single global `API_BASE_URL` declared in `config.js`, making it easy to switch environments or test locally.
+After debugging credential handling for a while, I realized I needed to consistently pass `{ credentials: 'include' }` in all fetch calls and make sure the Cloud Run instance allowed the correct origins and headers.
 
-```js
-const API_BASE_URL = "https://b1t-backend-584702183583.us-central1.run.app";
-```
+### Structuring Go for Modular Services
 
-### 🧠 Lessons & Breakthroughs
+I split the Go code into distinct packages under `cmd/` and `internal/`, which has made it much easier to maintain and expand. Using a router like `chi` helped keep the API routes clear and fast.
 
-- **CORS Pain**: Needed to allow the bucket domain to call the backend. Easy fix with headers on Go side.
-- **Static Routing in Buckets**: When a user visited `/login`, the bucket didn’t resolve it to `login.html`. Solution? A `meta redirect` in JavaScript or explicit links with `.html`.
-- **Missing Token**: Solved by setting `credentials: 'include'` in every `fetch()` and properly forwarding cookies in Cloud Run.
-- **Reversible Static Hosting**: With `gsutil rsync`, I could always sync to/from my local machine in seconds.
+### Cloud Deployment ≠ Complexity
 
-## Why I’m Proud of This One
+Deploying to Cloud Run was surprisingly smooth. Once I had my Dockerfile and `cloudbuild.yaml` pipeline ready, deployment became a single-command job. I now use Cloud Build substitutions for runtime variables like allowed origins and secret references — keeping things flexible across staging and production environments.
 
-This wasn’t just a school project or a test run. This is a real system I can hand to a small agency or freelancer group and say: “Here’s your portal. It’s secure. It works. And it’s yours.”
+---
 
-Everything is streamlined — from cloud-native security to scalable architecture.
+## Why It Matters
 
-And it’s just the start.
+The Portal isn’t meant to replace a full CRM or ERP. It's intentionally minimal — built for clarity, not complexity.
 
-## More Coming Soon
+But that’s exactly why it matters: it shows that small teams don’t need to compromise on security, scalability, or structure just because they’re small. With the right stack — Go, Firebase, GCP — you can build smart, reliable systems that grow with you.
 
-I’m planning to expand this with:
-- Admin-only analytics dashboards
-- Email triggers on invoice approvals
-- Multi-tenant support for other consulting groups
+This project also sets the foundation for future expansions: invoicing automations, time tracking integrations, or even a full dashboard for client self-service. But for now, it does exactly what it needs to: keep operations clean, secure, and centralized.
+
+---
+
+## Next Steps
+
+I’m already planning a few additions:
+
+- OAuth login support for clients
+- Basic analytics dashboard
+- Comment threads on projects for internal collaboration
