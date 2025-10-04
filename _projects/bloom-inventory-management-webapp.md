@@ -11,11 +11,11 @@ gallery:
     alt: "Bloom product dashboard"
     caption: "Centralized inventory management view"
   - src: /assets/img/projects/bloom-2.jpg
-    alt: "Shopify integration"
-    caption: "Automated product sync via webhooks"
+    alt: "Stock zones management"
+    caption: "Stock zones management for logistics"
   - src: /assets/img/projects/bloom-3.jpg
-    alt: "Database schema"
-    caption: "PostgreSQL schema design with normalized product tables"
+    alt: "Login"
+    caption: "Login page"
 ---
 
 ## The Problem We Solved
