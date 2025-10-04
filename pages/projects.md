@@ -29,18 +29,6 @@ permalink: /projects/
       <button class="category-filter" data-category="education">Education</button>
       <button class="category-filter clear-filters" data-action="clear" style="display:none;">Clear</button>
     </div>
-    <div class="category-legend">
-      <span class="legend-label">Tip: Select multiple categories to broaden results (OR logic). Use Clear or All to reset.</span>
-      <div class="legend-chips">
-        <span class="cat-chip legend" data-cat="web">Web</span>
-        <span class="cat-chip legend" data-cat="mobile">Mobile</span>
-        <span class="cat-chip legend" data-cat="data">Data</span>
-        <span class="cat-chip legend" data-cat="automation">Automation</span>
-        <span class="cat-chip legend" data-cat="cloud">Cloud</span>
-        <span class="cat-chip legend" data-cat="security">Security</span>
-        <span class="cat-chip legend" data-cat="education">Education</span>
-      </div>
-    </div>
   </div>
 
   <!-- Projects Grid -->
