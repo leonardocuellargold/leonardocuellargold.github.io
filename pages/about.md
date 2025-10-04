@@ -7,8 +7,15 @@ permalink: /about/
 <div class="container">
   <!-- Page Header -->
   <section class="section-header animate-fade-up">
-    <div class="profile-header">
-      <div class="profile-image-container">
+    <div class="prof      <div class="interest-card card">
+        <div class="interest-icon">🚀</div>
+        <h3>Building Ventures</h3>
+        <p>Always tinkering with new ideas and exploring entrepreneurial opportunities</p>
+      </div>eader">      <div class="interest-card card">
+        <div class="interest-icon">🎵</div>
+        <h3>Music</h3>
+        <p>Latin, rap, rock, EDM, and instrumental playlists fuel my work sessions and creativity</p>
+      </div>  <div class="profile-image-container">
         <img src="/assets/img/Headshot_Leo.jpg" alt="Leonardo Cuellar" class="profile-image">
       </div>
       <div class="profile-content">
@@ -100,7 +107,7 @@ permalink: /about/
       </p>
     </div>
   </section>
-  
+
   <!-- Continuous Learning -->
   <section class="learning-section animate-fade-up" style="animation-delay: 0.5s; margin-top: 4rem;">
     <div class="section-header">
