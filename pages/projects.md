@@ -20,10 +20,11 @@ permalink: /projects/
   <div class="project-categories mb-12 animate-fade-up" style="animation-delay: 0.2s">
     <div class="category-filters">
       <button class="category-filter active" data-category="all">All Projects</button>
-      <button class="category-filter" data-category="cloud">Cloud Infrastructure</button>
-      <button class="category-filter" data-category="data">Data Analytics</button>
+      <button class="category-filter" data-category="web">Web Applications</button>
+      <button class="category-filter" data-category="mobile">Mobile Apps</button>
+      <button class="category-filter" data-category="data">Data & Analytics</button>
       <button class="category-filter" data-category="automation">Automation</button>
-      <button class="category-filter" data-category="mobile">Mobile Development</button>
+      <button class="category-filter" data-category="cloud">Cloud & Infrastructure</button>
     </div>
   </div>
 
@@ -35,7 +36,7 @@ permalink: /projects/
       
       <article class="project-card card-interactive hover-lift animate-fade-up" 
                style="animation-delay: {{ forloop.index | times: 0.1 }}s"
-               data-category="{% if p.stack contains 'Go' or p.stack contains 'Power Automate' %}automation{% elsif p.stack contains 'R' %}data{% elsif p.stack contains 'React Native' %}mobile{% else %}cloud{% endif %}">
+               data-category="{% assign categories = '' %}{% for tech in p.stack %}{% if tech contains 'React Native' or tech contains 'Expo' %}{% assign categories = categories | append: 'mobile ' %}{% endif %}{% if tech contains 'Go' or tech contains 'MongoDB' or tech contains 'JavaScript' or tech contains 'Jekyll' or tech contains 'HTML/CSS' or tech contains 'Swing' %}{% assign categories = categories | append: 'web ' %}{% endif %}{% if tech contains 'Python' and (tech contains 'GIS' or tech contains 'DataViz' or tech contains 'Census') or tech contains 'Tableau' or tech contains 'SQL' %}{% assign categories = categories | append: 'data ' %}{% endif %}{% if tech contains 'Google Apps Script' or tech contains 'Power Automate' or tech contains 'Selenium' or tech contains 'Airtable API' or tech contains 'Shopify API' %}{% assign categories = categories | append: 'automation ' %}{% endif %}{% if tech contains 'GCP' or tech contains 'Firebase' or tech contains 'Firestore' or tech contains 'GitHub Pages' %}{% assign categories = categories | append: 'cloud ' %}{% endif %}{% endfor %}{% if categories == '' %}web{% else %}{{ categories | strip }}{% endif %}">
         
         <!-- Project Image -->
         <div class="project-image-container">

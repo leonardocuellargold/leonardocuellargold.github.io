@@ -52,9 +52,9 @@
   status: in-progress 
   featured_image: /assets/img/projects/AirTable-Hero.jpg
 
-- name: Juice Bar Business Analytics
-  summary: Designed financial and operations analytics models for a juice bar, covering demand, margins, and break-even analysis.
-  stack: [Excel, Tableau, SQL]
+- name: Java Juice Bar
+  summary: Built an interactive Java app simulating a juice bar ordering system with tax, discounts, and GUI dialogs.
+  stack: [Java, Swing]
   github: https://github.com/leonardocuellargold/Business_Application_Programming/tree/main/JuiceBar
   case: 
   link: 
