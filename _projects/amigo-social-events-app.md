@@ -9,10 +9,10 @@ hero_image: /assets/img/projects/amigo-social-events-detail-hero.jpg
 gallery:
   - src: /assets/img/projects/amigo-social-events-1.jpg
     alt: "Amigo app home screen"
-    caption: "Event discovery with map interface"
+    caption: "Event discovery with map interface and friend finding feature"
   - src: /assets/img/projects/amigo-social-events-2.jpg
-    alt: "Amigo friend features"
-    caption: "Friend-finding and social features"
+    alt: "Login page and profile page"
+    caption: "Login and edit your profile and see your events features"
 ---
 
 ## Overview
