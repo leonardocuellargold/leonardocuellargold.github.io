@@ -9,11 +9,11 @@ hero_image:
 read_time: 8
 gallery:
   - src: /assets/img/posts/IBM-Gallery-1.jpeg
-    alt: "IBM Watson Astor Place"
-    caption: "First day IBM Watson Astor Place"
-  - src: /assets/img/posts/IBM-Gallery-2.jpeg
     alt: "Yankees Game"
     caption: "Yankees game with IBM interns"
+  - src: /assets/img/posts/IBM-Gallery-2.jpeg
+    alt: "IBM Watson Astor Place"
+    caption: "First day IBM Watson Astor Place"
 ---
 
 If I had to describe my summer at IBM, I’d say it was a mix of mentorship, creativity, and community — all set against the backdrop of my first summer living in New York City. I joined IBM Consulting under the Hybrid Cloud Services line, supporting clients in the telecommunications space. What started as an internship quickly turned into one of the most transformative experiences I’ve had so far — one that combined technical growth with human connection, and professional learning with personal discovery.
