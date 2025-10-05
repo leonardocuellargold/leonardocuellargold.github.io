@@ -10,7 +10,7 @@ read_time: 8
 gallery:
   - src: /assets/img/posts/IBM-Gallery-1.jpeg
     alt: "IBM Watson Astor Place"
-    caption: "First day IBM Watson Astor Place
+    caption: "First day IBM Watson Astor Place"
   - src: /assets/img/posts/IBM-Gallery-2.jpeg
     alt: "Yankees Game"
     caption: "Yankees game with IBM interns"

@@ -11,7 +11,7 @@ gallery:
   - src: /assets/img/posts/ddwv-gallery-1.jpeg
     alt: "Nemacolin"
     caption: "Christmas at the Nemacolin Resort"
-  - src: /assets/img/posts/ddwv-gallery-2.jpeg
+  - src: /assets/img/posts/ddwv-gallery-2.JPEG
     alt: "Data Lab"
     caption: "Working at the data analytics lab"
   - src: /assets/img/posts/ddwv-gallery-3.jpeg

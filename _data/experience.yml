@@ -8,7 +8,7 @@
     - Facilitated IT leadership workshops with CIOs, CTOs, and senior executives of both organizations to validate consolidation models and secure alignment with minimal pushback.
     - Drove $20M+ in follow-on consulting work through actionable presentations and proposals.
     - Executed an IT carve-out migration for a PE-backed manufacturer, overseeing network cutovers and workstation migrations.
-  blog_post: 
+  blog_post: /blog/2025/10/04/west-monroe-infrastructure-cybersecurity-internship/
 
 - title: Tax Preparer Seasonal Intern – Wealth Management Tax Services
   org: PwC
@@ -18,7 +18,7 @@
     - Processed 800+ federal and state tax forms for banking client, resolving diagnostics to enable compliance automation.
     - Developed Python automation script for data cleaning, doubling tax-preparation efficiency.
     - Designed firm-wide Alteryx/VBA liability forecasting tool, improving accuracy and reducing manual effort by 80%.
-  blog_post: 
+  blog_post: /blog/2025/10/04/pwc-tax-season/
 
 - title: Application Consultant Intern – Hybrid Cloud Services
   org: IBM
@@ -39,7 +39,7 @@
     - Built no-code solution automating resort donations using digital wallets, boosting efficiency 10X while using only 1% of budget.
     - Integrated automated tracking and analytics tools into resort’s tech ecosystem to improve governance.
     - Conducted audits, gathered requirements, and facilitated staff adoption.
-  blog_post: 
+  blog_post: /blog/2025/10/04/ddwv-curiosity-to-impact/
 
 - title: Developer
   org: Those Who Bloom
@@ -58,7 +58,7 @@
   points:
     - Built Google Apps Script web app automating document intake and security audits.
     - Implemented WAF, updated plugins, and closed vulnerabilities on WordPress site.
-  blog_post: 
+  blog_post: /blog/2025/10/04/ddwv-curiosity-to-impact/
 
 - title: Business Intelligence Project Manager
   org: Data Driven WV – WesBanco
@@ -67,7 +67,7 @@
   points:
     - Designed Qlik Sense geospatial dashboards analyzing branch expansions with ranking formula.
     - Led BI project, delegated tasks, and presented insights to bank executives.
-  blog_post: 
+  blog_post: /blog/2025/10/04/ddwv-curiosity-to-impact/
 
 - title: Project Manager
   org: Data Driven WV – Accelerated Visions / 500 Rising
@@ -76,7 +76,7 @@
   points:
     - Managed Agile CMS/LMS migration project for women’s self-defense tutorials.
     - Researched authentication and encryption-focused platforms for secure delivery.
-  blog_post: 
+  blog_post: /blog/2025/10/04/ddwv-curiosity-to-impact/
 
 - title: Research Assistant
   org: WV State Office of Broadband – BEAD Program
