@@ -2,7 +2,7 @@
 layout: post
 title: "A Summer in the Cloud — My IBM Journey"
 subtitle: "Hybrid Cloud, AI, and a First Summer in New York City"
-date: 2024-08-30
+date: 2025-10-05
 tags: [IBM, Cloud, AIOps, Hybrid Cloud, Consulting, Mentorship]
 categories: [blog, experience]
 hero_image: 
