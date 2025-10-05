@@ -207,6 +207,18 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+/* Custom Scrollbar */
+body { scrollbar-width: thin; scrollbar-color: var(--accent-400) var(--bg-secondary); }
+body::-webkit-scrollbar { width: 10px; }
+body::-webkit-scrollbar-track { background: var(--bg-secondary); }
+body::-webkit-scrollbar-thumb { background: linear-gradient(var(--accent-400), var(--accent-600)); border-radius: 6px; border:2px solid var(--bg-secondary); }
+body::-webkit-scrollbar-thumb:hover { background: linear-gradient(var(--accent-300), var(--accent-500)); }
+@media (prefers-color-scheme: dark) {
+  body { scrollbar-color: var(--accent-500) var(--bg-tertiary); }
+  body::-webkit-scrollbar-track { background: var(--bg-tertiary); }
+  body::-webkit-scrollbar-thumb { background: linear-gradient(var(--accent-500), var(--accent-700)); border:2px solid var(--bg-tertiary); }
+  body::-webkit-scrollbar-thumb:hover { background: linear-gradient(var(--accent-400), var(--accent-600)); }
+}
 
 /* === TYPOGRAPHY === */
 h1, h2, h3, h4, h5, h6 {
@@ -485,6 +497,7 @@ p {
   .nav-toggle .hamburger-line {
     background: var(--text-primary);
   }
+  .hero .hero-title, .hero .hero-subtitle { color: var(--text-inverse) !important; }
   
   /* Desktop navigation dark theme - underline animations work the same in dark mode */
   
@@ -1965,6 +1978,33 @@ hr {
     text-align: center;
     gap: var(--space-4);
   }
+}
+
+/* === Post Layout Styles === */
+.post-hero { position:relative; padding: var(--space-16) 0 var(--space-12); text-align:center; background: linear-gradient(135deg, var(--secondary-800), var(--secondary-600)); overflow:hidden; }
+.post-hero-bg { background-size:cover; background-position:center; }
+.post-hero-overlay { position:absolute; inset:0; background: linear-gradient(180deg, rgba(15,23,42,.75), rgba(15,23,42,.85)); }
+.post-hero-inner { position:relative; z-index:5; max-width: var(--max-width-lg); margin:0 auto; padding:0 var(--space-6); }
+.post-title { font-size: clamp(2.25rem,5vw,3rem); font-weight:800; line-height:1.1; margin-bottom: var(--space-4); color: var(--text-inverse); }
+.post-subtitle { font-size: var(--text-xl); color: rgba(255,255,255,.85); max-width:60ch; margin:0 auto var(--space-6); }
+.post-meta { display:flex; flex-wrap:wrap; gap:.75rem; justify-content:center; align-items:center; font-size: var(--text-sm); color: var(--text-tertiary); }
+.post-meta .badge { background: rgba(255,255,255,0.1); color: var(--text-inverse); }
+.post-body { max-width: var(--max-width-prose); margin:0 auto; padding: var(--space-12) var(--space-6) var(--space-8); }
+.post-body h2 { margin-top: var(--space-12); }
+.post-body img { border-radius: var(--radius-lg); box-shadow: var(--shadow-md); margin: var(--space-6) 0; }
+.post-body pre { border-radius: var(--radius-md); padding: var(--space-4); background: var(--bg-secondary); overflow:auto; }
+.post-footer { margin-top: var(--space-12); padding: var(--space-12) 0 var(--space-8); text-align:center; }
+.post-navigation { display:flex; gap: var(--space-4); justify-content:center; flex-wrap:wrap; }
+.post-gallery { max-width: var(--max-width-xl); margin:0 auto var(--space-12); padding:0 var(--space-6); }
+.post-gallery h2 { text-align:center; }
+.gallery-grid { display:grid; gap: var(--space-6); grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); margin-top: var(--space-6); }
+.gallery-item { position:relative; }
+.gallery-item img { width:100%; height:auto; display:block; border-radius: var(--radius-xl); cursor:zoom-in; }
+.gallery-caption { font-size: var(--text-sm); color: var(--text-secondary); margin-top: var(--space-2); text-align:center; }
+@media (prefers-color-scheme: dark) {
+  .post-hero { background: linear-gradient(135deg, var(--secondary-900), var(--secondary-700)); }
+  .post-meta { color: var(--text-secondary); }
+  .post-body pre { background: var(--bg-tertiary); }
 }
 
 @media (max-width: 480px) {

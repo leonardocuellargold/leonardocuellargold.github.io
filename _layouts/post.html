@@ -2,41 +2,102 @@
 layout: default
 ---
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.modified_date -%}
-        ~ 
-        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-          {{ mdate | date: date_format }}
-        </time>
-      {%- endif -%}
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
-      {%- endif -%}
-    </p>
+<article class="post-detail" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-hero{% if page.hero_image %} post-hero-bg{% endif %}"{% if page.hero_image %} style="background-image: url('{{ page.hero_image }}')"{% endif %}>
+    <div class="post-hero-overlay"></div>
+    <div class="post-hero-inner">
+      <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+      <div class="post-meta">
+        <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %d, %Y" }}</time>
+        {% if page.tags %}
+          <span class="meta-separator">•</span>
+          <div class="post-tags">
+            {% for tag in page.tags %}<span class="badge">{{ tag }}</span>{% endfor %}
+          </div>
+        {% endif %}
+        {% if page.read_time %}
+          <span class="meta-separator">•</span>
+          <span class="read-time">{{ page.read_time }} min read</span>
+        {% endif %}
+      </div>
+    </div>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post-body e-content" itemprop="articleBody">
     {{ content }}
   </div>
 
+  {% if page.gallery %}
+    <section class="post-gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        {% for image in page.gallery %}
+          <figure class="gallery-item">
+            <img src="{{ image.src }}" alt="{{ image.alt | default: page.title }}" loading="lazy">
+            {% if image.caption %}<figcaption class="gallery-caption">{{ image.caption }}</figcaption>{% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
   <footer class="post-footer">
-    <a href="/blog/" class="btn btn-secondary">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z"/>
-      </svg>
-      Back to Blog
-    </a>
+    <div class="post-navigation">
+      <a href="/blog/" class="btn btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83L13.42 5.41L12 4 4 12 12 20 13.41 18.59 7.83 13H20V11Z"/></svg>
+        Back to Blog
+      </a>
+      <a href="/projects/" class="btn btn-ghost">Projects</a>
+    </div>
   </footer>
 </article>
+
+<!-- Image Zoom Modal (shared) -->
+<div class="image-zoom-modal" id="imageZoomModal">
+  <div class="image-zoom-container">
+    <div class="image-zoom-content">
+      <img id="zoomedImage" src="" alt="">
+      <div class="image-zoom-caption" id="zoomedCaption"></div>
+    </div>
+    <button class="image-zoom-close" id="closeZoomModal" aria-label="Close image">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+    </button>
+    <button class="image-zoom-nav prev" id="prevImage" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41 14 6 8 12l6 6 1.41-1.41L10.83 12l4.58-4.59Z"/></svg></button>
+    <button class="image-zoom-nav next" id="nextImage" aria-label="Next image"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6Z"/></svg></button>
+    <div class="image-zoom-counter" id="imageCounter"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('imageZoomModal');
+  const zoomedImage = document.getElementById('zoomedImage');
+  const zoomedCaption = document.getElementById('zoomedCaption');
+  const closeBtn = document.getElementById('closeZoomModal');
+  const prevBtn = document.getElementById('prevImage');
+  const nextBtn = document.getElementById('nextImage');
+  const counter = document.getElementById('imageCounter');
+  let currentImages = []; let currentIndex = 0;
+  function initImages(){
+    const imgs = document.querySelectorAll('.post-body img, .post-gallery img');
+    currentImages = Array.from(imgs);
+    currentImages.forEach((img, idx) => {
+      if(img.classList.contains('zoomable-processed')) return;
+      img.classList.add('zoomable-processed');
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', ()=> openModal(idx));
+    });
+  }
+  function openModal(i){ currentIndex=i; update(); modal.classList.add('active'); document.body.style.overflow='hidden'; }
+  function closeModal(){ modal.classList.remove('active'); document.body.style.overflow=''; }
+  function update(){ const img=currentImages[currentIndex]; if(!img) return; zoomedImage.src=img.src; zoomedImage.alt=img.alt||''; let c=''; const fc=img.closest('figure')?.querySelector('figcaption'); const gc=img.parentElement?.querySelector('.gallery-caption'); const ta=img.getAttribute('title'); if(fc) c=fc.textContent; else if(gc) c=gc.textContent; else if(ta) c=ta; else if(img.alt) c=img.alt; zoomedCaption.textContent=c; counter.textContent=`${currentIndex+1} of ${currentImages.length}`; prevBtn.disabled=currentIndex===0; nextBtn.disabled=currentIndex===currentImages.length-1; const multi=currentImages.length>1; prevBtn.style.display= multi ? 'flex':'none'; nextBtn.style.display= multi ? 'flex':'none'; counter.style.display= multi ? 'block':'none'; }
+  function prev(){ if(currentIndex>0){ currentIndex--; update(); }}
+  function next(){ if(currentIndex<currentImages.length-1){ currentIndex++; update(); }}
+  closeBtn.addEventListener('click', closeModal); prevBtn.addEventListener('click', prev); nextBtn.addEventListener('click', next);
+  modal.addEventListener('click', e => { if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', e => { if(!modal.classList.contains('active')) return; if(e.key==='Escape') closeModal(); if(e.key==='ArrowLeft') prev(); if(e.key==='ArrowRight') next(); });
+  initImages();
+  new MutationObserver(()=>initImages()).observe(document.body,{childList:true,subtree:true});
+});
+</script>

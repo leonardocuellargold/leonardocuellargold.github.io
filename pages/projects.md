@@ -17,7 +17,7 @@ permalink: /projects/
   </section>
 
   <!-- Project Categories Filter -->
-  <div class="project-categories mb-12 animate-fade-up" style="animation-delay: 0.2s">
+  <div class="project-categories mb-12 animate-fade-up" style="animation-delay: 0.2s; display:flex; flex-direction:column; align-items:center;">
     <div class="category-filters">
       <button class="category-filter active" data-category="all">All Projects</button>
       <button class="category-filter" data-category="web">Web Applications</button>
