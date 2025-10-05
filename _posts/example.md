@@ -3,6 +3,7 @@ layout: post
 title: \"My Infra Journey\"
 subtitle: \"Scaling resilient systems\"
 date: 2025-10-01
+categories: [blog]
 tags: [infrastructure, cloud, reliability]
 hero_image: /assets/img/hero-infra.jpg
 read_time: 6

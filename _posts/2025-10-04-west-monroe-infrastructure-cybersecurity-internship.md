@@ -3,7 +3,7 @@ layout: post
 title: "Another Summer in the Big Apple — My West Monroe Experience"
 subtitle: "Infrastructure, migration, and moments that made it unforgettable"
 date: 2025-10-04
-tags: [consulting, cloud, infrastructure, west-monroe, experience]
+tags: [consulting, cloud, infrastructure, west-monroe]
 categories: [blog, experience]
 hero_image: 
 read_time: 7
