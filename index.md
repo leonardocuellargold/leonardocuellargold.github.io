@@ -117,20 +117,30 @@ title: Home
     
     <div class="grid grid-2 mb-12">
       <div class="card animate-slide-left">
-        <h3>Cloud Platforms</h3>
-        <div class="flex flex-col gap-3 mt-4">
-          <div class="badge badge-info">Google Cloud Associate Engineer</div>
-          <div class="badge badge-info">Microsoft Azure Fundamentals</div>
-          <div class="badge badge-info">AWS Cloud Practitioner</div>
+        <h3>Certifications</h3>
+        <div class="flex flex-col gap-4 mt-4">
+          <div>
+            <strong>IBM Data Analyst Professional Certificate</strong>
+            <span class="small">IBM / Coursera · 2024</span>
+          </div>
+          <div>
+            <strong>Google Cloud Associate Cloud Engineer</strong>
+            <span class="small">Google Cloud · 2024</span>
+          </div>
         </div>
       </div>
       
       <div class="card animate-slide-left" style="animation-delay: 0.2s">
-        <h3>Data & Analytics</h3>
-        <div class="flex flex-col gap-3 mt-4">
-          <div class="badge badge-success">IBM Data Analyst Professional</div>
-          <div class="badge badge-success">Power BI Data Analyst</div>
-          <div class="badge badge-success">Tableau Desktop Specialist</div>
+        <h3>Additional Credentials</h3>
+        <div class="flex flex-col gap-4 mt-4">
+          <div>
+            <strong>Inclusive Mindset</strong>
+            <span class="small">PwC · 2025</span>
+          </div>
+          <div>
+            <strong>Microsoft Office Specialist (MOS)</strong>
+            <span class="small">Microsoft · 2022</span>
+          </div>
         </div>
       </div>
     </div>
