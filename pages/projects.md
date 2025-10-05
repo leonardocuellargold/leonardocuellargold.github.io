@@ -189,6 +189,7 @@ permalink: /projects/
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-primary);
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .category-filter {

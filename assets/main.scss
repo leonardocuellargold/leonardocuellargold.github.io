@@ -497,7 +497,19 @@ p {
   .nav-toggle .hamburger-line {
     background: var(--text-primary);
   }
-  .hero .hero-title, .hero .hero-subtitle { color: var(--text-inverse) !important; }
+  
+  /* Force white text for ALL hero titles and post titles in dark mode */
+  .hero .hero-title,
+  .hero .hero-subtitle,
+  .post-hero .post-title,
+  .post-hero .post-subtitle,
+  .post-hero .post-meta,
+  .post-hero .post-meta .badge,
+  .post-hero .post-meta .read-time,
+  .project-header-bg .project-header-content h1,
+  .project-header-bg .project-header-content .project-subtitle {
+    color: var(--text-inverse) !important;
+  }
   
   /* Desktop navigation dark theme - underline animations work the same in dark mode */
   
@@ -1985,16 +1997,18 @@ hr {
 .post-hero-bg { background-size:cover; background-position:center; }
 .post-hero-overlay { position:absolute; inset:0; background: linear-gradient(180deg, rgba(15,23,42,.75), rgba(15,23,42,.85)); }
 .post-hero-inner { position:relative; z-index:5; max-width: var(--max-width-lg); margin:0 auto; padding:0 var(--space-6); }
-.post-title { font-size: clamp(2.25rem,5vw,3rem); font-weight:800; line-height:1.1; margin-bottom: var(--space-4); color: var(--text-inverse); }
-.post-subtitle { font-size: var(--text-xl); color: rgba(255,255,255,.85); max-width:60ch; margin:0 auto var(--space-6); }
-.post-meta { display:flex; flex-wrap:wrap; gap:.75rem; justify-content:center; align-items:center; font-size: var(--text-sm); color: var(--text-tertiary); }
-.post-meta .badge { background: rgba(255,255,255,0.1); color: var(--text-inverse); }
+.post-title { font-size: clamp(2.25rem,5vw,3rem); font-weight:800; line-height:1.1; margin-bottom: var(--space-4); color: var(--text-inverse) !important; }
+.post-subtitle { font-size: var(--text-xl); color: rgba(255,255,255,.85) !important; max-width:60ch; margin:0 auto var(--space-6); }
+.post-meta { display:flex; flex-wrap:wrap; gap:.75rem; justify-content:center; align-items:center; font-size: var(--text-sm); color: rgba(255,255,255,.8) !important; }
+.post-meta .badge { background: rgba(255,255,255,0.15) !important; color: var(--text-inverse) !important; border: 1px solid rgba(255,255,255,.3); }
 .post-body { max-width: var(--max-width-prose); margin:0 auto; padding: var(--space-12) var(--space-6) var(--space-8); }
 .post-body h2 { margin-top: var(--space-12); }
 .post-body img { border-radius: var(--radius-lg); box-shadow: var(--shadow-md); margin: var(--space-6) 0; }
 .post-body pre { border-radius: var(--radius-md); padding: var(--space-4); background: var(--bg-secondary); overflow:auto; }
 .post-footer { margin-top: var(--space-12); padding: var(--space-12) 0 var(--space-8); text-align:center; }
 .post-navigation { display:flex; gap: var(--space-4); justify-content:center; flex-wrap:wrap; }
+.post-navigation .btn-ghost { background: var(--accent); color: white; border-color: var(--accent); }
+.post-navigation .btn-ghost:hover { background: var(--accent-600); border-color: var(--accent-600); }
 .post-gallery { max-width: var(--max-width-xl); margin:0 auto var(--space-12); padding:0 var(--space-6); }
 .post-gallery h2 { text-align:center; }
 .gallery-grid { display:grid; gap: var(--space-6); grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); margin-top: var(--space-6); }
@@ -2003,7 +2017,6 @@ hr {
 .gallery-caption { font-size: var(--text-sm); color: var(--text-secondary); margin-top: var(--space-2); text-align:center; }
 @media (prefers-color-scheme: dark) {
   .post-hero { background: linear-gradient(135deg, var(--secondary-900), var(--secondary-700)); }
-  .post-meta { color: var(--text-secondary); }
   .post-body pre { background: var(--bg-tertiary); }
 }
 
