@@ -2,19 +2,19 @@
 layout: post
 title: "From Curiosity to Impact — My Journey with Data Driven WV"
 subtitle: "Experiential learning, mentorship, and real-world problem solving through data and technology"
-date: 2025-01-25
+date: 2025-10-04
 tags: [Data Driven WV, Consulting, Analytics, Digital Transformation, Experiential Learning]
 categories: [blog, experience]
 hero_image: 
 read_time: 10
 gallery:
-  - src: /assets/img/posts/ddwv-gallery-1.jpg
+  - src: /assets/img/posts/ddwv-gallery-1.jpeg
     alt: "Nemacolin"
     caption: "Christmas at the Nemacolin Resort"
-  - src: /assets/img/posts/ddwv-gallery-2.jpg
+  - src: /assets/img/posts/ddwv-gallery-2.jpeg
     alt: "Data Lab"
     caption: "Working at the data analytics lab"
-  - src: /assets/img/posts/ddwv-gallery-3.jpg
+  - src: /assets/img/posts/ddwv-gallery-3.jpeg
     alt: "Accelerated Visions Golf Tournament"
     caption: "Speech at the accelerated visions golf tournament"
 ---

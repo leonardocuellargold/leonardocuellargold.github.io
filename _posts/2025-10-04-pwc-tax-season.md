@@ -2,7 +2,7 @@
 layout: post
 title: "Tax Season in Motion — My PwC Experience"
 subtitle: "Automation, Analytics, and Lessons from Busy Season"
-date: 2025-04-15
+date: 2025-10-04
 tags: [PwC, Tax, Accounting, Automation, Data Analytics]
 categories: [blog, experience]
 hero_image:
