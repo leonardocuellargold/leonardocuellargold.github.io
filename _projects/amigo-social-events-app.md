@@ -15,6 +15,8 @@ gallery:
     caption: "Login and edit your profile and see your events features"
 ---
 
+[![Amigo Feature Video](https://img.youtube.com/vi/GVUbQXoBlQA/0.jpg)](https://www.youtube.com/watch?v=GVUbQXoBlQA)
+
 ## Overview
 
 Amigo is a social events discovery app built with React Native and Expo, designed to help people find local events and connect with friends who share similar interests.
