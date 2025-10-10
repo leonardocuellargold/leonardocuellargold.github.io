@@ -7,7 +7,6 @@ tags: [ai, startups, low-code, engineering, product]
 categories: [blog, insight]
 hero_image: 
 read_time: 9
-draft: true
 ---
 
 ## Problem – The Shortcut Trap
