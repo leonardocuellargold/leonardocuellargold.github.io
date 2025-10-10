@@ -7,7 +7,7 @@ tags: [ai, startups, low-code, engineering, product]
 categories: [blog, insight]
 hero_image: /assets/img/posts/vibe-coding-hero.jpg
 read_time: 9
-published: false
+draft: true
 ---
 
 ## Problem – The Shortcut Trap
