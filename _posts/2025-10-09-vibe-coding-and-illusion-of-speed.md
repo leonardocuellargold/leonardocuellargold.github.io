@@ -34,7 +34,7 @@ This creates an illusion of acceleration — short-term gains masking long-term 
 
 Vibe coding is like building a skyscraper out of LEGO blocks: fast to assemble and impressive from afar, but wobbly once you add more floors.
 
-If the purpose of building a skyscraper is to make it last, why build it to just look like one? The temptation isn’t just about speed — it’s about believing you can outsource judgment and functionality, when in reality, judgment is the only thing you can’t automate.
+If the purpose of building a skyscraper is to make it last, why build it without the foundation to support it? The temptation isn’t just about speed — it’s about believing you can outsource judgment and functionality, when in reality, judgment is the only thing you can’t automate.
 
 ---
 
