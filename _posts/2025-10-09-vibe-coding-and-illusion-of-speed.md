@@ -5,7 +5,7 @@ subtitle: "Shortcuts, scaffolding, and why startups still need architects"
 date: 2025-10-09
 tags: [ai, startups, low-code, engineering, product]
 categories: [blog, insight]
-hero_image: /assets/img/posts/vibe-coding-hero.jpg
+hero_image: 
 read_time: 9
 draft: true
 ---
@@ -101,7 +101,7 @@ Business and technical founders must both build the roadmap, make trade-offs tog
 
 ## References
 
-- [The Founder Factor on Startup Success: Solo vs. Co-Founders](https://hbr.org/2021/06/the-founder-factor-on-startup-success-solo-vs-co-founders)
-- [Research: The Hidden Penalty of Using AI at Work — Harvard Business Review](https://hbr.org/2023/03/research-the-hidden-penalty-of-using-ai-at-work)
-- [Low-code/no-code: A way to transform shadow IT into a next-gen innovation engine — McKinsey & Company](https://www.mckinsey.com)
-- [The Hidden Costs of Coding With Generative AI — MIT Sloan Management Review](https://sloanreview.mit.edu)
+- [The Founder Factor on Startup Success: Solo vs. Co-Founders](https://seedblink.com/blog/2024-06-03-the-founder-factor-on-startup-success-solo-vs-co-founders#:~:text=Being%20the%20only%20founder%20for,in%20revenue)
+- [Research: The Hidden Penalty of Using AI at Work — Harvard Business Review](https://hbr.org/2025/08/research-the-hidden-penalty-of-using-ai-at-work)
+- [Low-code/no-code: A way to transform shadow IT into a next-gen innovation engine — McKinsey & Company](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/tech-forward/low-code-no-code-a-way-to-transform-shadow-it-into-a-next-gen-technology-asset)
+- [The Hidden Costs of Coding With Generative AI — MIT Sloan Management Review](https://sloanreview.mit.edu/article/the-hidden-costs-of-coding-with-generative-ai/#:~:text=Generative%20AI%20can%20be%20a,and%20leave%20companies%20worse%20off)
