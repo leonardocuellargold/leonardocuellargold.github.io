@@ -28,7 +28,8 @@ permalink: /blog/
 
   <!-- Blog Posts -->
   <section class="blog-posts animate-fade-up" style="animation-delay: 0.2s">
-    {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" | reverse %}
+    {% assign all_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
+    {% assign blog_posts = all_posts | where_exp: "post", "post.published != false" | reverse %}
     {% if blog_posts.size > 0 %}
       {% for post in blog_posts %}
         {% comment %}Build filter tags from post tags{% endcomment %}
